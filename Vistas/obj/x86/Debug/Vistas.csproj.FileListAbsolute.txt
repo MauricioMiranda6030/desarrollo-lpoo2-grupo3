@@ -1,0 +1,14 @@
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\bin\Debug\Vistas.exe
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\bin\Debug\Vistas.pdb
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\bin\Debug\ClaseBase.dll
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\bin\Debug\ClaseBase.pdb
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\MainWindow.baml
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\MainWindow.g.cs
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\App.g.cs
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.g.resources
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.exe
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Vistas.pdb

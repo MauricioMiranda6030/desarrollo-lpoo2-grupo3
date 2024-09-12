@@ -1,0 +1,4 @@
+E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.dll
+E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.pdb
+E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.dll
+E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.pdb
