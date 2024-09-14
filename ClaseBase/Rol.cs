@@ -5,9 +5,11 @@ using System.Text;
 
 namespace ClaseBase
 {
-    class Rol
+    public class Rol
     {
-        int codigo { get; set; }
-        String descripcion { get; set; }
+        public int Codigo { get; set; }
+        public String Descripcion { get; set; }
+
+        public Rol() {}
     }
 }

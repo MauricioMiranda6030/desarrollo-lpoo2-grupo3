@@ -5,10 +5,12 @@ using System.Text;
 
 namespace ClaseBase
 {
-    class Categoria
+    public class Categoria
     {
-        int id { get; set; }
-        String nombre { get; set; }
-        String descripcion { get; set; }
+        public int Id { get; set; }
+        public String Nombre { get; set; }
+        public String Descripcion { get; set; }
+
+        public Categoria() { }
     }
 }

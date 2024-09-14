@@ -5,12 +5,14 @@ using System.Text;
 
 namespace ClaseBase
 {
-    class Usuario
+    public class Usuario
     {
-        int id { get; set; }
-        String nickname { get; set; }
-        String password { get; set; }
-        String nombreCompleto { get; set; }
-        int rolCodigo { get; set;
+        public int Id { get; set; }
+        public String Nickname { get; set; }
+        public String Password { get; set; }
+        public String NombreCompleto { get; set; }
+        public int RolCodigo { get; set; }
+
+        public Usuario() {}
     }
 }

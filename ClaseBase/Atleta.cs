@@ -5,18 +5,20 @@ using System.Text;
 
 namespace ClaseBase
 {
-    class Atleta
+    public class Atleta
     {
-        int id { get; set; }
-        String nombre { get; set; }
-        String apellido { get; set; }
-        String nacionalidad { get; set; }
-        String entrenador { get; set; }
-        String genero { get; set; }
-        Double altura { get; set; }
-        Double peso { get; set; }
-        DateTime fechaNacimiento { get; set; }
-        String direccion { get; set; }
-        String email { get; set; }
+        public int Id { get; set; }
+        public String Nombre { get; set; }
+        public String Apellido { get; set; }
+        public String Nacionalidad { get; set; }
+        public String Entrenador { get; set; }
+        public String Genero { get; set; }
+        public Double Altura { get; set; }
+        public Double Peso { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public String Direccion { get; set; }
+        public String Email { get; set; }
+
+        public Atleta() { }
     }
 }
