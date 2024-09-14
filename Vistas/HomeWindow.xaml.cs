@@ -22,5 +22,71 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+
+        /**
+         * Minimiza la ventana
+         * */
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        /**
+         * Cierra la aplicación
+         * */
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        /**
+        * Mueve la ventana
+        * */
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowUtil.windowDrag(this, e);
+        }
+
+        /**
+         * Modulos Principales de la aplicación
+         * */
+        private void btnSistema_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnParticipantes_Click(object sender, RoutedEventArgs e)
+        {
+            ParticipantsWindow partWin = new ParticipantsWindow();
+            partWin.Show();
+        }
+
+        private void btnCompetencia_Click(object sender, RoutedEventArgs e)
+        {
+            CompetencesWindow compWin = new CompetencesWindow();
+            compWin.Show();
+        }
+
+        private void btnEventos_Click(object sender, RoutedEventArgs e)
+        {
+            EventWindow eventWin = new EventWindow();
+            eventWin.Show();
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            var res = MessageBox.Show("¿Cerrar Sesión?", "Logout", MessageBoxButton.YesNo);
+            if (MessageBoxResult.Yes == res)
+            {
+                LoginWindow frm = new LoginWindow();
+                frm.Show();
+                this.Close();
+            }
+        }
+
+
+
+
     }
 }
