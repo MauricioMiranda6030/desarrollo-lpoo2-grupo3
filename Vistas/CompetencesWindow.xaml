@@ -41,13 +41,13 @@
                         
                     </StackPanel>
                     <!--Menu Buttons-->
-                    <RadioButton Style="{StaticResource menuButton}"
+                    <!--<RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}">
                         <StackPanel Orientation="Horizontal" Height="47" Margin="15,2,0,0" Width="234">
                             <Image Source="/images/logofacu.png" Height="30" Width="30" Margin="35,0,20,0"/>
                             <TextBlock Text="CATEGORIA" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
-                    </RadioButton>
+                    </RadioButton>-->
                 </StackPanel>
                
             </Border>

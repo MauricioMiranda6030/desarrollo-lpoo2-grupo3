@@ -85,6 +85,12 @@ namespace Vistas
             }
         }
 
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            CategoryWindow catWin = new CategoryWindow();
+            catWin.Show();
+        }
+
 
 
 

@@ -40,3 +40,5 @@ C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vi
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.pdb
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\App.baml
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\Buttons.baml
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.baml
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.g.cs
