@@ -91,6 +91,18 @@ namespace Vistas
             catWin.Show();
         }
 
+        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            DisciplinaWindow disWin = new DisciplinaWindow();
+            disWin.Show();
+        }
+
+        private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+            AtletaWindow atlWin = new AtletaWindow();
+            atlWin.Show();
+        }
+
 
 
 

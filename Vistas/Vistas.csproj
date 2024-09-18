@@ -59,11 +59,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AtletaWindow.xaml.cs">
+      <DependentUpon>AtletaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CategoryWindow.xaml.cs">
       <DependentUpon>CategoryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="CompetencesWindow.xaml.cs">
       <DependentUpon>CompetencesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DisciplinaWindow.xaml.cs">
+      <DependentUpon>DisciplinaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EventWindow.xaml.cs">
       <DependentUpon>EventWindow.xaml</DependentUpon>
@@ -110,11 +116,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AtletaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CategoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CompetencesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisciplinaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
