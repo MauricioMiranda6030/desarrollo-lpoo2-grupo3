@@ -35,9 +35,7 @@ namespace Vistas
          * */
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            HomeWindow HomeWindow = new HomeWindow();
-            HomeWindow.Show();
-            this.Hide();
+            Application.Current.Shutdown();
             
         }
 
@@ -57,14 +55,18 @@ namespace Vistas
                 Categoria oCategoria = new Categoria();
                 oCategoria.Nombre = txtNombreCategoria.Text;
                 oCategoria.Descripcion = txtDescripcionCategoria.Text;
-
                 MessageBox.Show("Nombre: " + oCategoria.Nombre + "\nDescripcion: " + oCategoria.Descripcion);
+                LimpiarCampos();
+            }
+            else
+            {
+                LimpiarCampos();
             }
         }
 
         private void btnCancelarCategoria_Click(object sender, RoutedEventArgs e)
         {
-            LimpiarCampos();
+            WindowUtil.openWindow(this, new HomeWindow());
         }
 
         private void LimpiarCampos()

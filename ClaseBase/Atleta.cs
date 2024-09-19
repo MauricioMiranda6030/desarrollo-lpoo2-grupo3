@@ -8,6 +8,7 @@ namespace ClaseBase
     public class Atleta
     {
         public int Id { get; set; }
+        public String DNI { get; set; }
         public String Nombre { get; set; }
         public String Apellido { get; set; }
         public String Nacionalidad { get; set; }

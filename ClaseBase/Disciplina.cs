@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClaseBase
 {
-    class Disciplina
+   public class Disciplina
     {
         public int Id { get; set; }
         public String Name { get; set; }
