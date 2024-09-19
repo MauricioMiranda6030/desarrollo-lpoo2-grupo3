@@ -11,3 +11,7 @@ C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb

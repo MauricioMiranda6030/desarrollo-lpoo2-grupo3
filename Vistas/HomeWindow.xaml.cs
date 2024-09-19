@@ -87,20 +87,23 @@ namespace Vistas
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
-            CategoryWindow catWin = new CategoryWindow();
-            catWin.Show();
+            WindowUtil.openWindow(this, new CategoryWindow());
+            /*CategoryWindow catWin = new CategoryWindow();
+            catWin.Show();*/
         }
 
         private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
         {
-            DisciplinaWindow disWin = new DisciplinaWindow();
-            disWin.Show();
+            WindowUtil.openWindow(this, new DisciplinaWindow());
+            /*DisciplinaWindow disWin = new DisciplinaWindow();
+            disWin.Show();*/
         }
 
         private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
         {
-            AtletaWindow atlWin = new AtletaWindow();
-            atlWin.Show();
+            WindowUtil.openWindow(this, new AtletaWindow());
+            /*AtletaWindow atlWin = new AtletaWindow();
+            atlWin.Show();*/
         }
 
 

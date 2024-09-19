@@ -34,8 +34,12 @@ namespace Vistas
                 Disciplina oDisciplina = new Disciplina();
                 oDisciplina.Name = txtNombreDisciplina.Text;
                 oDisciplina.Description = txtDescripcionDiscplina.Text;
-
                 MessageBox.Show("Nombre: " + oDisciplina.Name + "\nDescripcion: " + oDisciplina.Description);
+                LimpiarCampos();
+            }
+            else
+            {
+                LimpiarCampos();
             }
 
         }
@@ -43,7 +47,6 @@ namespace Vistas
         private void btnCancelarDisciplina_Click(object sender, RoutedEventArgs e)
         {
             WindowUtil.openWindow(this, new HomeWindow());
-            LimpiarCampos();
         }
 
         private void LimpiarCampos()
