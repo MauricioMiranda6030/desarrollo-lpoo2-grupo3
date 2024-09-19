@@ -78,7 +78,7 @@
                 <!--<Button Content="Participantes" Margin="19,239,505,190" Name="btnParticipantes" Style="{StaticResource LoginButtonStyle}" Grid.Row="1" Click="btnParticipantes_Click"/>
                 <Button Content="Eventos" Margin="481,239,43,190" Name="btnEventos" Style="{StaticResource LoginButtonStyle}" Grid.Row="1" Click="btnEventos_Click"/>-->
                 <Button Content="Salir" Margin="265,340,259,89" Name="btnSalir" Style="{StaticResource LoginButtonStyle}" Background="#FFFF4848" Grid.Row="1" Click="btnSalir_Click" />
-                <TextBox Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="532,61,0,0" Name="txtCompetencia" VerticalAlignment="Top" Width="152" Text="COMPETENCIA" TextAlignment="Center" FontSize="15" />
+                <TextBox Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="532,61,0,0" Name="txtCompetencia" VerticalAlignment="Top" Width="152" Text="FORMULARIOS" TextAlignment="Center" FontSize="15" />
                 <ComboBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="532,108,0,0" Name="cmbCompetencia" VerticalAlignment="Top" Width="152">
                     <ComboBoxItem Content="Categoria" Selected="ComboBoxItem_Selected" />
                     <ComboBoxItem Content="Discplina" Selected="ComboBoxItem_Selected_1" />

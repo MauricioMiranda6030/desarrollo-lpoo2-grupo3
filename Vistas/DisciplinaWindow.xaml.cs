@@ -54,5 +54,20 @@ namespace Vistas
             txtNombreDisciplina.Text = String.Empty;
             txtDescripcionDiscplina.Text = String.Empty;
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowUtil.windowDrag(this, e);
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

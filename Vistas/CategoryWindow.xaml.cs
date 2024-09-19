@@ -35,9 +35,7 @@ namespace Vistas
          * */
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            HomeWindow HomeWindow = new HomeWindow();
-            HomeWindow.Show();
-            this.Hide();
+            Application.Current.Shutdown();
             
         }
 
