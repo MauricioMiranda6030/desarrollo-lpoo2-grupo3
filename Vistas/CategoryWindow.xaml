@@ -9,8 +9,8 @@
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
     <Window.Resources>
-        <!-- Cargar el ResourceDictionary que contiene los estilos -->
-        <ResourceDictionary Source="MyStyle.xaml"/>
+        <!-- Enlazar el diccionario de estilos -->
+        <ResourceDictionary Source="Styles/DiccionarioEstilos.xaml"/>
     </Window.Resources>
     
     <Grid>
@@ -77,8 +77,8 @@
                     <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="338,84,0,0" Name="txtNombreCategoria" VerticalAlignment="Top" Width="250" />
                     <Label Content="DESCRIPCION: " Grid.Row="1" Height="38" HorizontalAlignment="Left" Margin="117,162,0,0" Name="lblDescripcion" VerticalAlignment="Top" Width="171" FontSize="20" FontStretch="Normal" Foreground="White"/>
                     <TextBox Grid.Row="1" Height="60" HorizontalAlignment="Left" Margin="338,153,0,0" Name="txtDescripcionCategoria" VerticalAlignment="Top" Width="250" />
-                    <Button x:Name="btnAgregarCategoria" Style="{StaticResource LoginButtonStyle}" Content="Agregar" Margin="103,330,421,99" Grid.Row="1" Click="btnAgregarCategoria_Click" />
-                    <Button Content="Cancelar" Margin="422,330,102,99" Name="btnCancelarCategoria" Style="{StaticResource LoginButtonStyle}" Grid.Row="1" Click="btnCancelarCategoria_Click" />
+                    <Button x:Name="btnAgregarCategoria" Style="{StaticResource EstiloBotonMorado}" Content="Agregar" Margin="103,330,421,99" Grid.Row="1" Click="btnAgregarCategoria_Click" />
+                    <Button Content="Cancelar" Margin="422,330,102,99" Name="btnCancelarCategoria" Style="{StaticResource EstiloBotonMorado}" Grid.Row="1" Click="btnCancelarCategoria_Click" />
                 </Grid>
             </Border>
         </Border>
