@@ -46,22 +46,22 @@ namespace Vistas
             Application.Current.Shutdown();
         }
 
-        /** LOGIN */
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            string usuario = txtUser.Text;
-            string contrasenia = txtPass.Password;
+        ///** LOGIN */
+        //private void btnLogin_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string usuario = txtUser.Text;
+        //    string contrasenia = txtPass.Password;
 
-            if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contrasenia)
-            {
-                MessageBox.Show("Bienvenido/a " + usuario);
-                WindowUtil.openWindow(this, new HomeWindow());
-            }
-            else
-            {
-                MessageBox.Show("El usuario " + txtUser.Text + " o la contraseña no coinciden con ningún administrador.");
-            }
-        }
+        //    if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contrasenia)
+        //    {
+        //        MessageBox.Show("Bienvenido/a " + usuario);
+        //        WindowUtil.openWindow(this, new HomeWindow());
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("El usuario " + txtUser.Text + " o la contraseña no coinciden con ningún administrador.");
+        //    }
+        //}
 
         /**
          * Mueve la ventana
