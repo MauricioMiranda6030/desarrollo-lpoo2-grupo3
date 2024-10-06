@@ -1,0 +1,86 @@
+﻿<Window x:Class="Vistas.CategoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CategoryWindow" Height="550" Width="800"
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <!-- Enlazar el diccionario de estilos -->
+        <ResourceDictionary Source="Styles/DiccionarioEstilos.xaml"/>
+    </Window.Resources>
+    
+    <Grid>
+        <Border CornerRadius="12">
+            <Border.Background>
+                <ImageBrush ImageSource="/images/atletas.jpg"/>
+            </Border.Background>
+            <Border CornerRadius="10" BorderThickness="1" Opacity="0.86">
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462AD8" Offset="0"/>
+                        <GradientStop Color="#DA34AE" Offset="0.75"/>
+                        <GradientStop Color="#BA16C1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="0.75"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Categoría"
+                               Foreground="DarkGray"
+                               FontSize="15"
+                               FontFamily="Consolas"
+                               FontWeight="Bold"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                        <!-- Botón Minimize usando estilo de ResourceDictionary -->
+                        <Button x:Name="btnMinimize"
+                            Style="{StaticResource MinimizeButtonStyle}"
+                            Content="-"
+                            Click="btnMinimize_Click"
+                            Grid.Column="1"
+                            Cursor="Hand"/>
+
+                        <!-- Botón Close usando estilo de ResourceDictionary -->
+                        <Button x:Name="btnClose"
+                            Style="{StaticResource CloseButtonStyle}"
+                            Content="X"
+                            Click="btnClose_Click"
+                            Grid.Column="2"
+                            Cursor="Hand"/>
+                        
+                    </Grid>
+                    <Label Content="NOMBRE: " Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="117,75,0,0" Name="lblNombreCategoria" VerticalAlignment="Top" Width="107" FontSize="20" FontStretch="Normal" Foreground="White" />
+                    <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="338,84,0,0" Name="txtNombreCategoria" VerticalAlignment="Top" Width="250" />
+                    <Label Content="DESCRIPCION: " Grid.Row="1" Height="38" HorizontalAlignment="Left" Margin="117,162,0,0" Name="lblDescripcion" VerticalAlignment="Top" Width="171" FontSize="20" FontStretch="Normal" Foreground="White"/>
+                    <TextBox Grid.Row="1" Height="60" HorizontalAlignment="Left" Margin="338,153,0,0" Name="txtDescripcionCategoria" VerticalAlignment="Top" Width="250" />
+                    <Button x:Name="btnAgregarCategoria" Style="{StaticResource EstiloBotonMorado}" Content="Agregar" Margin="103,330,421,99" Grid.Row="1" Click="btnAgregarCategoria_Click" />
+                    <Button Content="Cancelar" Margin="422,330,102,99" Name="btnCancelarCategoria" Style="{StaticResource EstiloBotonMorado}" Grid.Row="1" Click="btnCancelarCategoria_Click" />
+                </Grid>
+            </Border>
+        </Border>
+    </Grid>
+</Window>

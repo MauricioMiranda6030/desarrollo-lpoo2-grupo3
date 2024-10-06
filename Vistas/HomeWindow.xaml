@@ -1,0 +1,90 @@
+﻿<Window x:Class="Vistas.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HomeWindow" Height="550" Width="800"
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        >
+        
+    
+    <Window.Resources>
+        <!-- Cargar el ResourceDictionary que contiene los estilos -->
+        <ResourceDictionary Source="MyStyle.xaml"/>
+    </Window.Resources>
+    <Border CornerRadius="12">
+        <Border.Background>
+            <ImageBrush ImageSource="/images/atletas.jpg"/>
+        </Border.Background>
+        <Border CornerRadius="10" BorderThickness="1" Opacity="0.86">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#BA16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="38"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Bienvenido"
+                               Foreground="DarkGray"
+                               FontSize="15"
+                               FontFamily="Consolas"
+                               FontWeight="Bold"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <!-- Botón Minimize usando estilo de ResourceDictionary -->
+                    <Button x:Name="btnMinimize"
+                            Style="{StaticResource MinimizeButtonStyle}"
+                            Content="-"
+                            Click="btnMinimize_Click"
+                            Grid.Column="1"
+                            Cursor="Hand"/>
+
+                    <!-- Botón Close usando estilo de ResourceDictionary -->
+                    <Button x:Name="btnClose"
+                            Style="{StaticResource CloseButtonStyle}"
+                            Content="X"
+                            Click="btnClose_Click"
+                            Grid.Column="2"
+                            Cursor="Hand"/>
+                    
+                </Grid>
+                <Button x:Name="btnSistema" Style="{StaticResource LoginButtonStyle}" Content="Sistema" Margin="19,91,505,338" Click="btnSistema_Click" Grid.Row="1" />
+                <!--<Button Content="Participantes" Margin="19,239,505,190" Name="btnParticipantes" Style="{StaticResource LoginButtonStyle}" Grid.Row="1" Click="btnParticipantes_Click"/>
+                <Button Content="Eventos" Margin="481,239,43,190" Name="btnEventos" Style="{StaticResource LoginButtonStyle}" Grid.Row="1" Click="btnEventos_Click"/>-->
+                <Button Content="Salir" Margin="265,340,259,89" Name="btnSalir" Style="{StaticResource LoginButtonStyle}" Background="#FFFF4848" Grid.Row="1" Click="btnSalir_Click" />
+                <TextBox Grid.Row="1" Height="32" HorizontalAlignment="Left" Margin="532,61,0,0" Name="txtCompetencia" VerticalAlignment="Top" Width="152" Text="FORMULARIOS" TextAlignment="Center" FontSize="15" />
+                <ComboBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="532,108,0,0" Name="cmbCompetencia" VerticalAlignment="Top" Width="152">
+                    <ComboBoxItem Content="Categoria" Selected="ComboBoxItem_Selected" />
+                    <ComboBoxItem Content="Discplina" Selected="ComboBoxItem_Selected_1" />
+                    <ComboBoxItem Content="Atleta" Selected="ComboBoxItem_Selected_2" />
+                </ComboBox>
+            </Grid>
+        </Border>
+    </Border>
+</Window>
