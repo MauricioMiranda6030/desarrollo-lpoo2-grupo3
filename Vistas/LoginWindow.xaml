@@ -1,6 +1,7 @@
 ﻿<Window x:Class="Vistas.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:Vistas.MyUserControl"
         Title="LoginWindow" Height="550" Width="800"
         WindowStyle="None" 
         AllowsTransparency="True"
@@ -70,93 +71,7 @@
                             Grid.Column="2"
                             Cursor="Hand"/>
                 </Grid>
-
-                <StackPanel Width="250" Grid.Row="2" Orientation="Vertical" Margin="0,15,0,0">
-                    <Image Source="/images/logofacu.png" Width="100" Height="100"/>
-                    <TextBlock Text="GRUPO 3 CODE"
-                               Foreground="White"
-                               FontSize="25"
-                               FontWeight="Bold"
-                               FontFamily="Consolas"
-                               HorizontalAlignment="Center"/>
-
-                    <TextBlock Text="Si lo podes imaginar, lo podes programar"
-                               Foreground="LightGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Consolas"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               Margin="0,3,0,0"/>
-
-                    <TextBlock Text="Usuario"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Consolas"
-                               Margin="0,15,0,0"/>
-
-                    <TextBox x:Name="txtUser"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Consolas"
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,1"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
-                             Padding="20,0,0,0">
-                        <TextBox.Background>
-                            <ImageBrush ImageSource="/images/user-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
-                        </TextBox.Background>
-                    </TextBox>
-
-                    <TextBlock Text="Contraseña"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Consolas"
-                               Margin="0,15,0,0"/>
-
-                    <PasswordBox x:Name="txtPass"
-                                 FontSize="13"
-                                 FontWeight="Medium"
-                                 FontFamily="Consolas"
-                                 Foreground="White"
-                                 CaretBrush="LightGray"
-                                 BorderBrush="DarkGray"
-                                 BorderThickness="0,0,0,1"
-                                 Height="28"
-                                 VerticalContentAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0">
-                        <PasswordBox.Background>
-                            <ImageBrush ImageSource="/images/key-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
-                        </PasswordBox.Background>
-                    </PasswordBox>
-
-                    <!-- Botón Login usando estilo de ResourceDictionary -->
-                    <Button x:Name="btnLogin"
-                            Style="{StaticResource LoginButtonStyle}"
-                            Content="Ingresar"
-                            Margin="0,50,0,0"
-                            Click="btnLogin_Click"/>
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
-                        <TextBlock Text="¿Olvidaste la Contraseña?"
-                                   Foreground="DarkGray"
-                                   FontSize="12"
-                                   FontWeight="Medium"
-                                   FontFamily="Consolas"
-                                   Cursor="Hand"/>
-                    </StackPanel>
-                </StackPanel>
+                <uc:LoginUserControl x:Name="OtroNombre" Margin="36,6,19,32" Grid.Row="1" />
             </Grid>
         </Border>
     </Border>
