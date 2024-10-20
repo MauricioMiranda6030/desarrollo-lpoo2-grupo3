@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Vistas.util;
 
 namespace Vistas.MyUserControl
 {
@@ -38,18 +39,13 @@ namespace Vistas.MyUserControl
 
             if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contrasenia)
             {
-                MessageBox.Show("Bienvenido/a " + usuario);
-
-                Window home = Window.GetWindow(new HomeWindow());
-
+                WindowUtil.customMessage("Bienvenido/a: " + txtUser.Text);
                 Window windowse = Window.GetWindow(this);
-                home.Show();
-                windowse.Close();
-                
+                WindowUtil.openWindow(windowse, new HomeWindow());
             }
             else
             {
-                MessageBox.Show("El usuario " + txtUser.Text + " o la contraseña no coinciden con ningún administrador.");
+                lblError.Visibility = Visibility.Visible;
             }
         }
     }

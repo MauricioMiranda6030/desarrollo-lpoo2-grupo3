@@ -19,8 +19,36 @@
         </Setter>
     </Style>
 
+    <Style x:Key="ButtonBaseYesNo" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <!-- Template va fuera de los Setters -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="50" Height="50" CornerRadius="9" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!-- Estilo de Botón Ingresar -->
-    <Style x:Key="LoginButtonStyle" BasedOn="{StaticResource ButtonBaseStyle}" TargetType="Button">
+    <!--<Style x:Key="LoginButtonStyle" BasedOn="{StaticResource ButtonBaseStyle}" TargetType="Button">
+        <Setter Property="Background" Value="#FF4AFFFF"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#28AEED"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>-->
+
+    <!--Estilo Botones Yes NO-->
+    <Style x:Key="yesNo" BasedOn="{StaticResource ButtonBaseYesNo}" TargetType="Button">
         <Setter Property="Background" Value="#462AD8"/>
         <!-- Triggers van después de los Setters -->
         <Style.Triggers>

@@ -86,7 +86,13 @@
     <Compile Include="ParticipantsWindow.xaml.cs">
       <DependentUpon>ParticipantsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowUtil.cs" />
+    <Compile Include="util\dialogBox.xaml.cs">
+      <DependentUpon>dialogBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="util\dialogYesNo.xaml.cs">
+      <DependentUpon>dialogYesNo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="util\WindowUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginWindow.xaml.cs">
@@ -109,6 +115,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="fonts\FontAwesome.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,10 +161,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MyUserControl\LoginUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,11 +173,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\DiccionarioEstilos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\UIColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="util\dialogBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="util\dialogYesNo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="util\style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,6 +206,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CompetitionStates.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\messi.jpeg" />
+    <Resource Include="images\Portadatransparente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
