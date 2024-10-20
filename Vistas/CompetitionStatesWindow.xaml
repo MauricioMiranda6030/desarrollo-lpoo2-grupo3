@@ -1,0 +1,22 @@
+﻿<Window x:Class="Vistas.CompetitionStatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ClaseBase;assembly=ClaseBase"
+        xmlns:svc="clr-namespace:ClaseBase;assembly=ClaseBase"
+        Loaded="Window_Loaded"
+        Title="CompetitionStatesWindow" Height="300" Width="420">
+    <Window.Resources>
+        <XmlDataProvider x:Key="CompStates" Source="./CompetitionStates.xml" XPath="/estados/tipo" />
+        
+        <svc:StateConverter x:Key="StateConvert"/>
+    </Window.Resources>
+    <Grid>
+        <ComboBox Height="25" HorizontalAlignment="Left" Margin="136,95,0,0" Name="cmbCompetitionState" VerticalAlignment="Top" Width="148" ItemsSource="{Binding Source={StaticResource CompStates}}" 
+                  DisplayMemberPath="@name" SelectedValuePath="@name"
+                  SelectionChanged="cmbCompetitionState_SelectionChanged" />
+        <Label Content="Estado" Height="28" HorizontalAlignment="Left" Margin="78,95,0,0" Name="lblNombre" VerticalAlignment="Top" />
+        <Rectangle Height="25" HorizontalAlignment="Left" Margin="308,94,0,0" Name="rctRectangle" Stroke="Black"         VerticalAlignment="Top" Width="29"  Fill="{Binding SelectedValue, ElementName=cmbCompetitionState, Converter={StaticResource StateConvert}}"/>
+        <Button Content="Aceptar" Height="26" HorizontalAlignment="Left" Margin="61,172,0,0" Name="btnAceptar" VerticalAlignment="Top" Width="90" Click="btnAceptar_Click" />
+        <Button Content="Cancelar" Height="26" HorizontalAlignment="Left" Margin="227,172,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="90" Click="btnCancelar_Click" />
+    </Grid>
+</Window>

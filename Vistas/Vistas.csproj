@@ -68,6 +68,9 @@
     <Compile Include="CompetencesWindow.xaml.cs">
       <DependentUpon>CompetencesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CompetitionStatesWindow.xaml.cs">
+      <DependentUpon>CompetitionStatesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DisciplinaWindow.xaml.cs">
       <DependentUpon>DisciplinaWindow.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CompetitionStatesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DisciplinaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +184,9 @@
     <Resource Include="images\key-icon.png" />
     <Resource Include="images\logofacu.png" />
     <Resource Include="images\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CompetitionStates.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

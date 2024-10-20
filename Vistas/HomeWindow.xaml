@@ -83,6 +83,7 @@
                     <ComboBoxItem Content="Categoria" Selected="ComboBoxItem_Selected" />
                     <ComboBoxItem Content="Discplina" Selected="ComboBoxItem_Selected_1" />
                     <ComboBoxItem Content="Atleta" Selected="ComboBoxItem_Selected_2" />
+                    <ComboBoxItem Content="Estado" Selected="ComboBoxItem_Selected_3" />
                 </ComboBox>
             </Grid>
         </Border>

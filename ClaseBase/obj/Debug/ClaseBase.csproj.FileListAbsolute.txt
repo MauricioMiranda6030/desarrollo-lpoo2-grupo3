@@ -15,3 +15,7 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
+J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
+J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
+J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
+J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
