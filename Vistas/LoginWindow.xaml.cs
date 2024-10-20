@@ -23,13 +23,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private Dictionary<string, string> usuarios = new Dictionary<string, string>()
-        {
-            { "administrador", "administrador" },
-            { "operador", "operador" },
-            { "vendedor", "vendedor" }
-        };
-
         /**
          * Minimiza la ventana
          * */
@@ -43,25 +36,11 @@ namespace Vistas
          * */
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            if (WindowUtil.messageYesNo("¿Seguro que queres salir?"))
+            {
+                Application.Current.Shutdown();
+            }
         }
-
-        ///** LOGIN */
-        //private void btnLogin_Click(object sender, RoutedEventArgs e)
-        //{
-        //    string usuario = txtUser.Text;
-        //    string contrasenia = txtPass.Password;
-
-        //    if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contrasenia)
-        //    {
-        //        MessageBox.Show("Bienvenido/a " + usuario);
-        //        WindowUtil.openWindow(this, new HomeWindow());
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("El usuario " + txtUser.Text + " o la contraseña no coinciden con ningún administrador.");
-        //    }
-        //}
 
         /**
          * Mueve la ventana

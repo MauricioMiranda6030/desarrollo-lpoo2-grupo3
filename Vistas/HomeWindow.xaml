@@ -11,10 +11,10 @@
         >
         
     
-    <Window.Resources>
-        <!-- Cargar el ResourceDictionary que contiene los estilos -->
+    <!--<Window.Resources>
+
         <ResourceDictionary Source="MyStyle.xaml"/>
-    </Window.Resources>
+    </Window.Resources>-->
     <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/images/atletas.jpg"/>
