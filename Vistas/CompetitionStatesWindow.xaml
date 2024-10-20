@@ -1,0 +1,107 @@
+﻿<Window x:Class="Vistas.CompetitionStatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ClaseBase;assembly=ClaseBase"
+        xmlns:svc="clr-namespace:ClaseBase;assembly=ClaseBase"
+        Loaded="Window_Loaded"
+        Title="CompetitionStatesWindow" Height="550" Width="800"
+        WindowStyle="None" 
+        AllowsTransparency="True"        
+        Background="Transparent"        
+        ResizeMode="NoResize"       
+        WindowStartupLocation="CenterScreen"       
+        MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MyStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <XmlDataProvider x:Key="CompStates" Source="./CompetitionStates.xml" XPath="/estados/tipo" />
+            <svc:StateConverter x:Key="StateConvert"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Border CornerRadius="12">
+            <Border.Background>
+                <ImageBrush ImageSource="/images/atletas.jpg"/>
+            </Border.Background>
+            <Border CornerRadius="10" BorderThickness="1" Opacity="0.86">
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462AD8" Offset="0"/>
+                        <GradientStop Color="#DA34AE" Offset="0.75"/>
+                        <GradientStop Color="#BA16C1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="0.75"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Estado de Competición" 
+                                   Foreground="DarkGray" 
+                                   FontSize="15" 
+                                   FontFamily="Consolas" 
+                                   FontWeight="Bold" 
+                                   VerticalAlignment="Center" 
+                                   Margin="10,0,0,0"/>
+                        <Button x:Name="btnMinimize"
+                                Style="{StaticResource MinimizeButtonStyle}"
+                                Content="-"
+                                Click="btnMinimize_Click"
+                                Grid.Column="1"
+                                Cursor="Hand"/>
+                        <Button Content="X" 
+                                Style="{StaticResource CloseButtonStyle}" 
+                                Click="btnClose_Click" 
+                                Grid.Column="2" 
+                                Cursor="Hand"/>
+                    </Grid>
+                    <!-- Cambios aquí -->
+                    <Grid Grid.Row="1" Margin="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Estado" FontSize="20" Foreground="White" Height="38" Margin="153,196,0,196" Grid.Column="1" Width="81" HorizontalAlignment="Left" />
+                        <ComboBox Name="cmbCompetitionState" Height="30" Width="250" 
+                                  ItemsSource="{Binding Source={StaticResource CompStates}}" 
+                                  DisplayMemberPath="@name" 
+                                  SelectedValuePath="@name" 
+                                  Grid.Column="1"/>
+                        <Rectangle Height="25" Width="29"  
+                                   Fill="{Binding SelectedValue, ElementName=cmbCompetitionState, Converter={StaticResource StateConvert}}"
+                                   Grid.Column="1" Margin="506,202,199,202" />
+
+                        <Button Content="Cancelar" Height="46" Width="207" Margin="334,291,95,92" Style="{StaticResource LoginButtonStyle}" Click="btnCancelar_Click" Grid.Column="1" />
+                        <Button Content="Aceptar" Height="46" Width="177" Margin="150,290,0,93" Style="{StaticResource LoginButtonStyle}" Click="btnAceptar_Click" Grid.Column="1" HorizontalAlignment="Left" />
+                    </Grid>
+                </Grid>
+            </Border>
+        </Border>
+
+        <!-- <ComboBox Height="25" HorizontalAlignment="Left" Margin="136,95,0,0" Name="cmbCompetitionState" VerticalAlignment="Top" Width="148" ItemsSource="{Binding Source={StaticResource CompStates}}" 
+                  DisplayMemberPath="@name" SelectedValuePath="@name"
+                   />
+        <Label Content="Estado" Height="28" HorizontalAlignment="Left" Margin="78,95,0,0" Name="lblNombre" VerticalAlignment="Top" />
+        <Rectangle Height="25" HorizontalAlignment="Left" Margin="308,94,0,0" Name="rctRectangle" Stroke="Black"         VerticalAlignment="Top" Width="29"  Fill="{Binding SelectedValue, ElementName=cmbCompetitionState, Converter={StaticResource StateConvert}}"/>
+        <Button Content="Aceptar" Height="26" HorizontalAlignment="Left" Margin="61,172,0,0" Name="btnAceptar" VerticalAlignment="Top" Width="90" Click="btnAceptar_Click" />
+        <Button Content="Cancelar" Height="26" HorizontalAlignment="Left" Margin="227,172,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="90" Click="btnCancelar_Click" />-->
+    </Grid>
+</Window>

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/user-icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("estadoscomp.xml")]
 
 

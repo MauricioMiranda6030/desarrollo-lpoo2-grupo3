@@ -106,6 +106,11 @@ namespace Vistas
             atlWin.Show();*/
         }
 
+        private void ComboBoxItem_Selected_3(object sender, RoutedEventArgs e)
+        {
+            WindowUtil.openWindow(this, new CompetitionStatesWindow());
+        }
+
 
 
 
