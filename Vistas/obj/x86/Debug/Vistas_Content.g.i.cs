@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("estadoscomp.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/messi.jpeg")]
 
 

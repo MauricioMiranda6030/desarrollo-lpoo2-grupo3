@@ -82,7 +82,6 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.ba
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\EventWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\HomeWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\LoginWindow.baml
-C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\MyStyle.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\ParticipantsWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\Buttons.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\UIColors.baml
@@ -173,3 +172,16 @@ J:\NCT\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.Properties.Resources.
 J:\NCT\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 J:\NCT\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.exe
 J:\NCT\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetitionStatesWindow.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\DiccionarioEstilos.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetitionStatesWindow.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\ButtonStyle.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\style.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogBox.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogBox.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogYesNo.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogYesNo.g.cs
