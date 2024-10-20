@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using ClaseBase;
 
 namespace Vistas
 {
@@ -23,23 +24,9 @@ namespace Vistas
         public CompetitionStatesWindow()
         {
             InitializeComponent();
-            //DataContext = this;
-        }
-     
-        private void cmbCompetitionState_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // Verifica si hay un elemento seleccionado
-            var selectedItem = cmbCompetitionState.SelectedItem;
-            if (selectedItem != null)
-            {
-                // Muestra el estado seleccionado en un MessageBox
-                var element = selectedItem as System.Xml.XmlElement;
-                if (element != null)
-                {                    
-                   // MessageBox.Show("Estado de Competencia: " + element.GetAttribute("name"));
-                }
-            }
-        }
+            
+        }     
+       
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
            //cmbCompetitionState.SelectedIndex = 0;
@@ -55,6 +42,18 @@ namespace Vistas
         {
             MessageBox.Show("Cambio guardado");
             WindowUtil.openWindow(this, new HomeWindow());
+        }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowUtil.windowDrag(this, e);
         }
 
     }
