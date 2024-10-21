@@ -13,9 +13,9 @@
         MouseDown="Window_MouseDown">
     <Window.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
+            <!--<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="MyStyle.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>-->
             <XmlDataProvider x:Key="CompStates" Source="./CompetitionStates.xml" XPath="/estados/tipo" />
             <svc:StateConverter x:Key="StateConvert"/>
         </ResourceDictionary>

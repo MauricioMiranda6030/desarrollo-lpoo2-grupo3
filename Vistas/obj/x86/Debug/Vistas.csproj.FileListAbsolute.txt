@@ -77,7 +77,6 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.pdb
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\AtletaWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.baml
-C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetencesWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\EventWindow.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\HomeWindow.baml
@@ -87,7 +86,6 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\UIColors.bam
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\App.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\AtletaWindow.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.g.cs
-C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetencesWindow.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\EventWindow.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\HomeWindow.g.cs

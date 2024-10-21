@@ -65,9 +65,6 @@
     <Compile Include="CategoryWindow.xaml.cs">
       <DependentUpon>CategoryWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CompetencesWindow.xaml.cs">
-      <DependentUpon>CompetencesWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CompetitionStatesWindow.xaml.cs">
       <DependentUpon>CompetitionStatesWindow.xaml</DependentUpon>
     </Compile>
@@ -140,10 +137,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CategoryWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CompetencesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,6 +217,9 @@
   <ItemGroup>
     <Resource Include="images\messi.jpeg" />
     <Resource Include="images\Portadatransparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="util\CompetenceState.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
