@@ -7,6 +7,138 @@
              Background="Transparent"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <!-- Define 2 Rows: One for the title and another for the main content -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Title Section -->
+        <TextBlock Grid.Row="0" 
+                   Text="Gestión de Competencias" 
+                   FontFamily="Consolas" 
+                   FontSize="30" 
+                   FontWeight="Bold" 
+                   Foreground="White" 
+                   Background="Cyan" 
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center" 
+                   TextAlignment="Center" 
+                   Padding="1"/>
+
+        <!-- Main Content: Two columns -->
+        <Grid Grid.Row="1">
+            <!-- Define 2 Columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- First Column -->
+            <Grid Grid.Column="0">
+                <!-- Define 2 Rows -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- DataGrid in the first row -->
+                <DataGrid Grid.Row="0" AutoGenerateColumns="True" x:Name="dataGridCompetencia" Margin="10"/>
+
+                <!-- TextBox and Button in the second row -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <TextBox Name="txtSearch" Width="200" Margin="5" VerticalAlignment="Center" />
+                    <Button Style="{StaticResource AccionGuardar}"  x:Name="btnSearch" Click="btnSearch_Click" Content="Buscar" Width="100" Margin="5" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Second Column -->
+            <Grid Grid.Column="1" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- TextBox fields with labels -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Nombre:" Width="100" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtNombre" Width="200" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Descripción:" Width="100" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtDescripcion" Width="200" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Fecha Inicio:" Width="100" VerticalAlignment="Center"/>
+                    <DatePicker x:Name="txtFechaIni" Width="200" Margin="5" SelectedDate="{Binding FechaInicio}" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Fecha Fin:" Width="100" VerticalAlignment="Center"/>
+                    <DatePicker x:Name="txtFechaFin" Width="200" Margin="5" SelectedDate="{Binding FechaFin}" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Estado:" Width="100" VerticalAlignment="Center"/>
+                    <!--<TextBox x:Name="txtGenero" Width="200" Margin="5"/>-->
+                    <ComboBox x:Name="txtEstado" Width="200" Margin="5" SelectedItem="{Binding Estado}">
+                        <ComboBoxItem Content="Masculino"/>
+                        <ComboBoxItem Content="Femenino"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Organizador:" Width="100" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtOrganizador" Width="200" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Ubicación:" Width="100" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtUbicacion" Width="200" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Sponsors:" Width="100" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtSponsors" Width="200" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Categoría:" Width="100" VerticalAlignment="Center"/>
+                    <!--<TextBox x:Name="txtGenero" Width="200" Margin="5"/>-->
+                    <ComboBox x:Name="txtCategoria" Width="200" Margin="5" SelectedItem="{Binding Categoria}">
+                        <ComboBoxItem Content="Masculino"/>
+                        <ComboBoxItem Content="Femenino"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Disciplina:" Width="100" VerticalAlignment="Center"/>
+                    <!--<TextBox x:Name="txtGenero" Width="200" Margin="5"/>-->
+                    <ComboBox x:Name="txtDisciplina" Width="200" Margin="5" SelectedItem="{Binding Disciplina}">
+                        <ComboBoxItem Content="Masculino"/>
+                        <ComboBoxItem Content="Femenino"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <!-- Buttons: Modify and Clear -->
+                <StackPanel Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <Button Style="{StaticResource AccionGuardar}" x:Name="btnAdd" Content="Agregar" Click="btnAdd_Click" Width="80" Margin="2"/>
+                    <Button Style="{StaticResource AccionEditar}"  x:Name="btnEdit" Content="Editar" Click="btnEdit_Click" Width="80" Margin="2"/>
+                    <Button Style="{StaticResource AccionEliminar}" x:Name="btnDelete" Content="Eliminar" Click="btnDelete_Click" Width="80" Margin="2"/>
+                    <Button Style="{StaticResource AccionLimpiar}" x:Name="btnLimpiar" Content="Limpiar" Click="btnLimpiar_Click" Width="80" Margin="2"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>

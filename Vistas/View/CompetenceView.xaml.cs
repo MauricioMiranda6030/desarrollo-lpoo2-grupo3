@@ -23,5 +23,30 @@ namespace Vistas.View
         {
             InitializeComponent();
         }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            //En construcción...
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //En construcción...
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            //En construcción...
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            //En construcción...
+        }
+
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            //En construcción...
+        }
     }
 }
