@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vistas.View;
 
 namespace Vistas
 {
@@ -23,95 +24,75 @@ namespace Vistas
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            WindowUtil.SetDateTimeLabels(dateLabel, timeLabel);
+            WindowUtil.StartTimer(timeLabel);
+            WindowUtil.OpenUserControl(ContenArea, new MainView());
+        }
 
-        /**
-         * Minimiza la ventana
-         * */
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        private void pnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowUtil.MoveWindow(this);
+        }
+
+        private void pnlControlBar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            WindowUtil.MaximizeWindow(this);
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowUtil.messageYesNo("¿Seguro que queres salir?"))
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowUtil.maximizeMinimizeWindow(this);
+        }
+
+        private void btnMinize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
 
-        /**
-         * Cierra la aplicación
-         * */
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-        }
-
-        /**
-        * Mueve la ventana
-        * */
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            WindowUtil.windowDrag(this, e);
-        }
-
-        /**
-         * Modulos Principales de la aplicación
-         * */
-        private void btnSistema_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnParticipantes_Click(object sender, RoutedEventArgs e)
-        {
-            ParticipantsWindow partWin = new ParticipantsWindow();
-            partWin.Show();
+            WindowUtil.OpenUserControl(ContenArea, new MainView());
         }
 
         private void btnCompetencia_Click(object sender, RoutedEventArgs e)
         {
-            CompetencesWindow compWin = new CompetencesWindow();
-            compWin.Show();
+
         }
 
-        private void btnEventos_Click(object sender, RoutedEventArgs e)
+        private void btnAtleta_Click(object sender, RoutedEventArgs e)
         {
-            EventWindow eventWin = new EventWindow();
-            eventWin.Show();
+            WindowUtil.OpenUserControl(ContenArea, new atletaView());
         }
 
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        private void btnCategoria_Click(object sender, RoutedEventArgs e)
         {
-            var res = MessageBox.Show("¿Cerrar Sesión?", "Logout", MessageBoxButton.YesNo);
-            if (MessageBoxResult.Yes == res)
-            {
-                LoginWindow frm = new LoginWindow();
-                frm.Show();
-                this.Close();
-            }
+
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        private void btbDisciplina_Click(object sender, RoutedEventArgs e)
         {
-            WindowUtil.openWindow(this, new CategoryWindow());
-            /*CategoryWindow catWin = new CategoryWindow();
-            catWin.Show();*/
+
         }
 
-        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        private void btnEvento_Click(object sender, RoutedEventArgs e)
         {
-            WindowUtil.openWindow(this, new DisciplinaWindow());
-            /*DisciplinaWindow disWin = new DisciplinaWindow();
-            disWin.Show();*/
+
         }
 
-        private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            WindowUtil.openWindow(this, new AtletaWindow());
-            /*AtletaWindow atlWin = new AtletaWindow();
-            atlWin.Show();*/
+            WindowUtil.openWindow(this, new LoginWindow());
         }
-
-        private void ComboBoxItem_Selected_3(object sender, RoutedEventArgs e)
-        {
-            WindowUtil.openWindow(this, new CompetitionStatesWindow());
-        }
-
-
 
 
     }

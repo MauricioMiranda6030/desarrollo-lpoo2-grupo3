@@ -185,3 +185,9 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogBox.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogBox.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogYesNo.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\util\dialogYesNo.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\MainView.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\MainView.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\atletaView.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CompetenceView.baml
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\atletaView.g.cs
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CompetenceView.g.cs

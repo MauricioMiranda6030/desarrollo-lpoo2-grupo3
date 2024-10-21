@@ -112,7 +112,61 @@
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource Self}}"/>
         <Setter Property="FontSize" Value="16"/>
     </Style>
+    
+    <!--Gestión-->
+    <Style x:Key="BaseGestion" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <!-- Template va fuera de los Setters -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="70" Height="40" CornerRadius="9" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
+    <Style x:Key="AccionGuardar" BasedOn="{StaticResource BaseGestion}" TargetType="Button">
+        <Setter Property="Background" Value="#182aff"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#6bca18"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AccionEditar" BasedOn="{StaticResource BaseGestion}" TargetType="Button">
+        <Setter Property="Background" Value="#440ed8"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#c5780d"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AccionEliminar" BasedOn="{StaticResource BaseGestion}" TargetType="Button">
+        <Setter Property="Background" Value="#e61c1c"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#de1bae"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AccionLimpiar" BasedOn="{StaticResource BaseGestion}" TargetType="Button">
+        <Setter Property="Background" Value="#0d99ad"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#187ae2"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
     <!-- Estilos de Botones -->
     <Style x:Key="ButtonBaseStyle" TargetType="Button">

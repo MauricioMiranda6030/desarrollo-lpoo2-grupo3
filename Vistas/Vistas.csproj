@@ -93,6 +93,15 @@
       <DependentUpon>dialogYesNo.xaml</DependentUpon>
     </Compile>
     <Compile Include="util\WindowUtil.cs" />
+    <Compile Include="View\atletaView.xaml.cs">
+      <DependentUpon>atletaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CompetenceView.xaml.cs">
+      <DependentUpon>CompetenceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginWindow.xaml.cs">
@@ -194,6 +203,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="util\style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\atletaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CompetenceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
