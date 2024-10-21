@@ -66,7 +66,7 @@ namespace Vistas
 
         private void btnCompetencia_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowUtil.OpenUserControl(ContenArea, new CompetenceView());
         }
 
         private void btnAtleta_Click(object sender, RoutedEventArgs e)

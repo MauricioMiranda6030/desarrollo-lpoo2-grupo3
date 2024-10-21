@@ -83,9 +83,6 @@
     <Compile Include="MyUserControl\LoginUserControl.xaml.cs">
       <DependentUpon>LoginUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParticipantsWindow.xaml.cs">
-      <DependentUpon>ParticipantsWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="util\dialogBox.xaml.cs">
       <DependentUpon>dialogBox.xaml</DependentUpon>
     </Compile>
@@ -171,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\LoginUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ParticipantsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
