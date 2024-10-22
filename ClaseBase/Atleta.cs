@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.ComponentModel;
+
 namespace ClaseBase
 {
-    public class Atleta:IDataErrorInfo
+    public class Atleta
     {
         public int Id { get; set; }
         public String DNI { get; set; }
@@ -21,52 +21,5 @@ namespace ClaseBase
         public String Email { get; set; }
 
         public Atleta() { }
-
-        public string Error
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public string this[string columnName] {
-
-            get {
-                string result = null;
-                switch (columnName) {
-                   // case "id":
-                       // if (Id <= 0)
-                           // result = "ID es obligatorio y debe ser mayor a 0.";
-                      //  break;
-                    case "dni":
-                        if (string.IsNullOrEmpty(DNI))
-                            result = "DNI es obligatorio.";
-                        break;
-                    case "apellido":
-                        if (string.IsNullOrEmpty(Apellido))
-                            result = "Apellido es obligatorio.";
-                        break;
-                    case "nombre":
-                        if (string.IsNullOrEmpty(Nombre))
-                            result = "Nombre es obligatorio.";
-                        break;
-                    case "altura":
-                        if (Altura <= 0)
-                            result = "Altura es obligatoria y debe ser mayor a 0.";
-                        break;
-                    case "peso":
-                        if (Peso <= 0)
-                            result = "Peso es obligatorio y debe ser mayor a 0.";
-
-                        break;
-                }
-                return result;
-            }
-        }
-
-
-
-        public string this[string columnName]
-        {
-            get { throw new NotImplementedException(); }
-        }
     }
 }

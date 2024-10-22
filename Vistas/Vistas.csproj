@@ -90,9 +90,6 @@
       <DependentUpon>dialogYesNo.xaml</DependentUpon>
     </Compile>
     <Compile Include="util\WindowUtil.cs" />
-    <Compile Include="ValidarAtleta.xaml.cs">
-      <DependentUpon>ValidarAtleta.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\atletaView.xaml.cs">
       <DependentUpon>atletaView.xaml</DependentUpon>
     </Compile>
@@ -199,10 +196,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="util\style.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ValidarAtleta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

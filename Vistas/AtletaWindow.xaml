@@ -10,7 +10,7 @@
         MouseDown="Window_MouseDown">
     <Window.Resources>
         <!-- Cargar el ResourceDictionary que contiene los estilos -->
-        <ResourceDictionary Source="Styles/DiccionarioEstilos.xaml"/>
+        <ResourceDictionary Source="MyStyle.xaml"/>
     </Window.Resources>
     <Grid>
         <Border CornerRadius="12">

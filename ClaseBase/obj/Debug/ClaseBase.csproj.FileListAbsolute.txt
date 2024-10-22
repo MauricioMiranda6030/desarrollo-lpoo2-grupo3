@@ -2,6 +2,10 @@ E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.dll
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.pdb
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.dll
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\LPOO2\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
@@ -16,8 +20,3 @@ J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
 J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
 J:\NCT\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
-C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.dll
-C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\bin\Debug\ClaseBase.pdb
-C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.dll
-C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.pdb
-C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
