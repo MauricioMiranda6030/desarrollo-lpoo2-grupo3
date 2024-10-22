@@ -23,6 +23,7 @@ namespace Vistas.View
         public atletaView()
         {
             InitializeComponent();
+            this.DataContext = new Atleta(); 
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
