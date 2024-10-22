@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/messi.jpeg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("util/competencestate.xml")]
 
 

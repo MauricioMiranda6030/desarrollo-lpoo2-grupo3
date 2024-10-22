@@ -9,6 +9,8 @@ using System.Windows.Controls;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using Vistas.util;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Vistas
 {
