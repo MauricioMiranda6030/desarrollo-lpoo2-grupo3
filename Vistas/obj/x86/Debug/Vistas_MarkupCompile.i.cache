@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\
 Vistas
 none
 false
 DEBUG;TRACE
-C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\App.xaml
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\App.xaml
 18-684709381
 
-19-1725822457
-132101202449
+19-419633848
+13-498048765
 AtletaWindow.xaml;CategoryWindow.xaml;CompetitionStatesWindow.xaml;DisciplinaWindow.xaml;EventWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MyUserControl\LoginUserControl.xaml;Styles\Buttons.xaml;Styles\ButtonStyle.xaml;Styles\DiccionarioEstilos.xaml;Styles\UIColors.xaml;util\dialogBox.xaml;util\dialogYesNo.xaml;util\style.xaml;View\atletaView.xaml;View\CompetenceView.xaml;View\MainView.xaml;
 
-False
+True
 

@@ -83,7 +83,7 @@
                 <!-- TextBox fields with labels -->
                 <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
                     <TextBlock Foreground="White" FontFamily="Consolas" Text="Nombre:" Width="100" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtNombre" Width="200" Margin="5"/>
+                    <TextBox x:Name="txtNombre" Width="200" Margin="5" Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">

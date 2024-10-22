@@ -39,6 +39,10 @@ namespace ClaseBase
                         if (string.IsNullOrEmpty(DNI))
                             result = "El DNI es obligatorio.";
                         break;
+                    case "Nombre":
+                        if (string.IsNullOrEmpty(Nombre))
+                            result = "El Nombre es obligatorio.";
+                        break;
                     case "Apellido":
                         if (string.IsNullOrEmpty(Apellido))
                             result = "El Apellido es obligatorio.";
