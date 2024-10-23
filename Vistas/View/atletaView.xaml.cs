@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClaseBase;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Vistas.View
 {
@@ -23,12 +25,50 @@ namespace Vistas.View
         public atletaView()
         {
             InitializeComponent();
+            loadAthletes();
             this.DataContext = new Atleta(); 
         }
 
+        public void loadAthletes() {
+            DataTable athletes = TrabajarAtletas.listAtletas();
+            dataGridAtletas.ItemsSource = athletes.DefaultView;
+        }
+
+
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            //En construcción...
+            // Convertir el texto del campo de búsqueda a entero (ID)
+            if (isNumber(txtSearch.Text))
+            {
+                // Obtener el atleta por su ID
+                Atleta atleta = TrabajarAtletas.GetAtletaById(int.Parse(txtSearch.Text));
+
+                // Si se encontró el atleta, llenar los campos
+                if (atleta != null)
+                {
+                    txtNombre.Text = atleta.Nombre;
+                    txtApellido.Text = atleta.Apellido;
+                    txtDni.Text = atleta.DNI;
+                    txtNacionalidad.Text = atleta.Nacionalidad;
+                    txtEntrenador.Text = atleta.Entrenador;
+                    txtGenero.SelectedValue = atleta.Genero; 
+                    txtAltura.Text = atleta.Altura.ToString();
+                    txtPeso.Text = atleta.Peso.ToString();
+                    txtFechaNac.SelectedDate = atleta.FechaNacimiento; 
+                    txtDireccion.Text = atleta.Direccion;
+                    txtEmail.Text = atleta.Email;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el atleta con ese ID.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            txtSearch.Text = null;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -41,9 +81,10 @@ namespace Vistas.View
                 return;
             }
             if (WindowUtil.messageYesNo("¿Seguro que quieres guardar al Atleta?"))
-            {            
-                addAtleta(oAtleta);
+            {
+                ClaseBase.TrabajarAtletas.addAtleta(addAtleta(oAtleta));
                 mostrarAtleta(oAtleta);
+                loadAthletes();
             }
         }
 
@@ -108,5 +149,19 @@ namespace Vistas.View
         {
 
         }
+
+        public bool isNumber(String number) {
+            try
+            {
+                int.Parse(number);
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+
+        }
+        
     }
 }
