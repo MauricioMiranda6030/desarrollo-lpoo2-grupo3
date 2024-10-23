@@ -32,13 +32,32 @@ namespace Vistas.View
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            if (WindowUtil.messageYesNo("¿Seguro que queres guardar al Atleta?"))
+        {            
+            Atleta oAtleta = (Atleta)this.DataContext;
+
+            if (!ValidarAtleta(oAtleta))
             {
-                Atleta oAtleta = new Atleta();
+                WindowUtil.customMessage("Por favor, completa todos los campos obligatorios correctamente.");
+                return;
+            }
+            if (WindowUtil.messageYesNo("¿Seguro que quieres guardar al Atleta?"))
+            {            
                 addAtleta(oAtleta);
                 mostrarAtleta(oAtleta);
             }
+        }
+
+        private bool ValidarAtleta(Atleta atleta)
+        {            
+            foreach (var property in typeof(Atleta).GetProperties())
+            {
+                string error = atleta[property.Name];
+                if (!string.IsNullOrEmpty(error))
+                {                    
+                    return false;
+                }
+            }
+            return true;
         }
 
         public Atleta addAtleta(Atleta oAtleta)
