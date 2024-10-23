@@ -107,13 +107,11 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">
-                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Gégenero:" Width="100" VerticalAlignment="Center"/>
-                    <!--<TextBox x:Name="txtGenero" Width="200" Margin="5"/>-->
-                    <ComboBox x:Name="txtGenero" Width="200" Margin="5" SelectedItem="{Binding Genero}">
+                    <TextBlock Foreground="White" FontFamily="Consolas" Text="Género:" Width="100" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="txtGenero" Width="200" Margin="5" SelectedValue="{Binding Genero}" SelectedValuePath="Content">
                         <ComboBoxItem Content="Masculino"/>
                         <ComboBoxItem Content="Femenino"/>
                     </ComboBox>
-
                 </StackPanel>
 
                 <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" Margin="1">

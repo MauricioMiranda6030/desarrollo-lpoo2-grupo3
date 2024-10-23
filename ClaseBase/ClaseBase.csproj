@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Rol.cs" />
     <Compile Include="StateConverter.cs" />
+    <Compile Include="TrabajarAtletas.cs" />
     <Compile Include="TrabajarCategoria.cs" />
     <Compile Include="TrabajarCompetencia.cs" />
     <Compile Include="TrabajarDisciplina.cs" />
