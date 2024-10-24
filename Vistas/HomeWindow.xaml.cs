@@ -76,12 +76,12 @@ namespace Vistas
 
         private void btnCategoria_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowUtil.OpenUserControl(ContenArea, new CategoryView());
         }
 
         private void btbDisciplina_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowUtil.OpenUserControl(ContenArea, new Discipline());
         }
 
         private void btnEvento_Click(object sender, RoutedEventArgs e)

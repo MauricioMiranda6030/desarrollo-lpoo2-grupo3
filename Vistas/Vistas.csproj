@@ -59,21 +59,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AtletaWindow.xaml.cs">
-      <DependentUpon>AtletaWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CategoryWindow.xaml.cs">
-      <DependentUpon>CategoryWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CompetitionStatesWindow.xaml.cs">
-      <DependentUpon>CompetitionStatesWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DisciplinaWindow.xaml.cs">
-      <DependentUpon>DisciplinaWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EventWindow.xaml.cs">
-      <DependentUpon>EventWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HomeWindow.xaml.cs">
       <DependentUpon>HomeWindow.xaml</DependentUpon>
     </Compile>
@@ -90,8 +75,14 @@
     <Compile Include="View\atletaView.xaml.cs">
       <DependentUpon>atletaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CategoryView.xaml.cs">
+      <DependentUpon>CategoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CompetenceView.xaml.cs">
       <DependentUpon>CompetenceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Discipline.xaml.cs">
+      <DependentUpon>Discipline.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -132,26 +123,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AtletaWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CategoryWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CompetitionStatesWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DisciplinaWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EventWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="HomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,7 +167,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\CategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CompetenceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Discipline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,9 +189,6 @@
     <Resource Include="images\key-icon.png" />
     <Resource Include="images\logofacu.png" />
     <Resource Include="images\user-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="CompetitionStates.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\messi.jpeg" />

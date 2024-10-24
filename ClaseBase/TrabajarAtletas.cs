@@ -110,7 +110,77 @@ namespace ClaseBase
 
             // Retornar el DataTable con los datos
             return dt;
+
         }
+
+        public static void updateAtleta(Atleta atleta)
+        {
+            // Crear conexión
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                // Crear consulta SQL para actualizar los datos del atleta
+                string query = @"UPDATE Atleta 
+                         SET dni = @DNI, 
+                             apellido = @Apellido, 
+                             nombre = @Nombre, 
+                             nacionalidad = @Nacionalidad, 
+                             entrenador = @Entrenador, 
+                             genero = @Genero, 
+                             altura = @Altura, 
+                             peso = @Peso, 
+                             fecha_nacimiento = @FechaNacimiento, 
+                             direccion = @Direccion, 
+                             correo = @Correo
+                         WHERE id = @Id";
+
+                // Crear el comando SQL con la consulta
+                SqlCommand cmd = new SqlCommand(query, cnn);
+
+                // Agregar parámetros con los valores del objeto Atleta
+                cmd.Parameters.AddWithValue("@DNI", atleta.DNI);
+                cmd.Parameters.AddWithValue("@Apellido", atleta.Apellido);
+                cmd.Parameters.AddWithValue("@Nombre", atleta.Nombre);
+                cmd.Parameters.AddWithValue("@Nacionalidad", atleta.Nacionalidad);
+                cmd.Parameters.AddWithValue("@Entrenador", atleta.Entrenador);
+                cmd.Parameters.AddWithValue("@Genero", atleta.Genero);
+                cmd.Parameters.AddWithValue("@Altura", atleta.Altura);
+                cmd.Parameters.AddWithValue("@Peso", atleta.Peso);
+                cmd.Parameters.AddWithValue("@FechaNacimiento", atleta.FechaNacimiento);
+                cmd.Parameters.AddWithValue("@Direccion", atleta.Direccion);
+                cmd.Parameters.AddWithValue("@Correo", atleta.Email);
+                cmd.Parameters.AddWithValue("@Id", atleta.Id); // ID del atleta a actualizar
+
+                // Abrir conexión
+                cnn.Open();
+
+                // Ejecutar el comando
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void deleteAtleta(int id)
+        {
+            // Crear conexión
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                // Crear consulta SQL para eliminar el atleta por su id
+                string query = @"DELETE FROM Atleta WHERE id = @Id";
+
+                // Crear el comando SQL con la consulta
+                SqlCommand cmd = new SqlCommand(query, cnn);
+
+                // Agregar el parámetro id
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                // Abrir conexión
+                cnn.Open();
+
+                // Ejecutar el comando
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
 
 
 

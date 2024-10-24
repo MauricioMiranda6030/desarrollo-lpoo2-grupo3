@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,7 +40,7 @@ namespace Vistas.View
         private void loadListDisciplines()
         {
             DataTable disciplinasTable = TrabajarDisciplina.getAllDisciplines();
-            txtDisciplina.ItemsSource = disciplinasTable.DefaultView; 
+            txtDisciplina.ItemsSource = disciplinasTable.DefaultView;
         }
 
         private void loadCompetence()

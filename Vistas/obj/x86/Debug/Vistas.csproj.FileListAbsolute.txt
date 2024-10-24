@@ -201,11 +201,6 @@ C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\bin\Debug\Vistas.pdb
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\bin\Debug\ClaseBase.dll
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\bin\Debug\ClaseBase.pdb
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\AtletaWindow.baml
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.baml
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetitionStatesWindow.baml
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.baml
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\EventWindow.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\HomeWindow.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\Buttons.baml
@@ -219,11 +214,6 @@ C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\atletaView.ba
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CompetenceView.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\MainView.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\App.baml
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\AtletaWindow.g.cs
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CategoryWindow.g.cs
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\CompetitionStatesWindow.g.cs
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.g.cs
-C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\EventWindow.g.cs
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\HomeWindow.g.cs
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\LoginWindow.g.cs
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.g.cs
@@ -240,3 +230,7 @@ C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\LoginWindow.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.g.resources
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CategoryView.baml
+C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\Discipline.baml
+C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CategoryView.g.cs
+C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\Discipline.g.cs
