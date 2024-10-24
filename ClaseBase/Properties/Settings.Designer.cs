@@ -26,8 +26,8 @@ namespace ClaseBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\DEV\\HUEVODIBU\\desarrollo-lpoo2-grupo" +
-            "3\\comdep.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\dev\\lpoo2\\LPOOIIGrupo03\\comdep.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30;User Instance=True")]
         public string comdepConnectionString {
             get {
                 return ((string)(this["comdepConnectionString"]));

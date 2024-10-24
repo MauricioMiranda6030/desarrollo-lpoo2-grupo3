@@ -104,20 +104,12 @@ C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vi
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\AtletaWindow.g.cs
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\DisciplinaWindow.g.cs
 C:\Users\roagu\Downloads\LPOO2_2024\TrabajosPracticos\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\Styles\DiccionarioEstilos.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\AtletaWindow.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\CategoryWindow.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\DisciplinaWindow.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\EventWindow.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\HomeWindow.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Styles\Buttons.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Styles\DiccionarioEstilos.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Styles\UIColors.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\App.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\AtletaWindow.g.cs
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\CategoryWindow.g.cs
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\DisciplinaWindow.g.cs
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\EventWindow.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\HomeWindow.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\LoginWindow.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\MyUserControl\LoginUserControl.g.cs
@@ -182,7 +174,6 @@ C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\atletaView.bam
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CompetenceView.baml
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\atletaView.g.cs
 C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CompetenceView.g.cs
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\CompetitionStatesWindow.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\Styles\ButtonStyle.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\util\dialogBox.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\util\dialogYesNo.baml
@@ -190,7 +181,6 @@ E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\util\style.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\atletaView.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\CompetenceView.baml
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\MainView.baml
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\CompetitionStatesWindow.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\util\dialogBox.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\util\dialogYesNo.g.cs
 E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\atletaView.g.cs
@@ -234,3 +224,7 @@ C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CategoryView.
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\Discipline.baml
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\CategoryView.g.cs
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\View\Discipline.g.cs
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\CategoryView.baml
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\Discipline.baml
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\CategoryView.g.cs
+E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\View\Discipline.g.cs

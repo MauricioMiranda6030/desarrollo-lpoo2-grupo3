@@ -28,7 +28,7 @@ namespace Vistas.View
         {
             InitializeComponent();
             loadAthletes();
-            this.DataContext = new Atleta(); 
+            this.DataContext = new Atleta();
         }
 
         public void loadAthletes() {
