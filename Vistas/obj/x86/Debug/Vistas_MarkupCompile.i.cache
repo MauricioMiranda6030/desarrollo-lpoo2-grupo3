@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\DEV\HUEVODIBU\desarrollo-lpoo2-grupo3\Vistas\App.xaml
-18-684709381
+15-1292660676
 
-19-457645812
+16234757724
 13-1644307690
-AtletaWindow.xaml;CategoryWindow.xaml;CompetitionStatesWindow.xaml;DisciplinaWindow.xaml;EventWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MyUserControl\LoginUserControl.xaml;Styles\Buttons.xaml;Styles\ButtonStyle.xaml;Styles\DiccionarioEstilos.xaml;Styles\UIColors.xaml;util\dialogBox.xaml;util\dialogYesNo.xaml;util\style.xaml;View\atletaView.xaml;View\CompetenceView.xaml;View\MainView.xaml;
+HomeWindow.xaml;LoginWindow.xaml;MyUserControl\LoginUserControl.xaml;Styles\Buttons.xaml;Styles\ButtonStyle.xaml;Styles\DiccionarioEstilos.xaml;Styles\UIColors.xaml;util\dialogBox.xaml;util\dialogYesNo.xaml;util\style.xaml;View\atletaView.xaml;View\CategoryView.xaml;View\CompetenceView.xaml;View\Discipline.xaml;View\MainView.xaml;
 
 False
 

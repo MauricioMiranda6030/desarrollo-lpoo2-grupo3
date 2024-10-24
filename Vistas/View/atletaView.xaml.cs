@@ -22,6 +22,8 @@ namespace Vistas.View
     /// </summary>
     public partial class atletaView : UserControl
     {
+        int idModificar = 0;
+
         public atletaView()
         {
             InitializeComponent();
@@ -57,6 +59,8 @@ namespace Vistas.View
                     txtFechaNac.SelectedDate = atleta.FechaNacimiento; 
                     txtDireccion.Text = atleta.Direccion;
                     txtEmail.Text = atleta.Email;
+
+                    idModificar = int.Parse(txtSearch.Text);
                     
                 }
                 else
@@ -85,6 +89,7 @@ namespace Vistas.View
                 ClaseBase.TrabajarAtletas.addAtleta(addAtleta(oAtleta));
                 mostrarAtleta(oAtleta);
                 loadAthletes();
+                cleanup();
             }
         }
 
@@ -120,7 +125,7 @@ namespace Vistas.View
         public void mostrarAtleta(Atleta oAtleta)
         {
             MessageBox.Show(
-                    "ID: " + oAtleta.Id + "\n"+
+                   
                     "DNI: " + oAtleta.DNI + "\n" +
                      "Apellido: " + oAtleta.Apellido + "\n" +
                      "Nombre: " + oAtleta.Nombre + "\n" +
@@ -137,17 +142,44 @@ namespace Vistas.View
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            //En construcción...
+            Atleta oAtleta = (Atleta)this.DataContext;
+
+            if (!ValidarAtleta(oAtleta))
+            {
+                WindowUtil.customMessage("Por favor, completa todos los campos obligatorios correctamente.");
+                return;
+            }
+            if (WindowUtil.messageYesNo("¿Seguro que quieres modificar al Atleta?"))
+            {
+                addAtleta(oAtleta);
+                oAtleta.Id = idModificar;
+                ClaseBase.TrabajarAtletas.updateAtleta(oAtleta);
+                mostrarAtleta(oAtleta);
+                loadAthletes();
+                idModificar = 0;
+                cleanup();
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            //En construcción...
+            if (idModificar == 0)
+            {
+                WindowUtil.customMessage("Por favor, Selecciona un usuario a eliminar");
+                return;
+            }
+            if (WindowUtil.messageYesNo("¿Seguro que quieres ELIMINAR al Atleta?"))
+            {
+                ClaseBase.TrabajarAtletas.deleteAtleta(idModificar);
+                loadAthletes();
+                idModificar = 0;
+                cleanup();
+            }
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-
+            cleanup();
         }
 
         public bool isNumber(String number) {
@@ -161,6 +193,21 @@ namespace Vistas.View
                 return false;
             }
 
+        }
+
+        public void cleanup() {
+
+            txtNombre.Text = null;
+            txtApellido.Text = null;
+            txtDni.Text = null;
+            txtNacionalidad.Text = null;
+            txtEntrenador.Text = null;
+            txtGenero.SelectedValue = null;
+            txtAltura.Text = null;
+            txtPeso.Text = null;
+            txtFechaNac.SelectedDate = null;
+            txtDireccion.Text = null;
+            txtEmail.Text = null;
         }
         
     }
