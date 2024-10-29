@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.ComponentModel;
 namespace ClaseBase
 {
-    public class Usuario
+    public class Usuario : INotifyPropertyChanged
     {
         public int Id { get; set; }
         public String Nickname { get; set; }
@@ -14,5 +14,8 @@ namespace ClaseBase
         public int RolCodigo { get; set; }
 
         public Usuario() {}
+        public Usuario(string pUsername, string pPassword) { }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

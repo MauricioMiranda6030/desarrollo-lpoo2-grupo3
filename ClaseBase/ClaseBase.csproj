@@ -61,6 +61,7 @@
     <Compile Include="TrabajarCategoria.cs" />
     <Compile Include="TrabajarCompetencia.cs" />
     <Compile Include="TrabajarDisciplina.cs" />
+    <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
