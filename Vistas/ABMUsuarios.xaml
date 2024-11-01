@@ -7,7 +7,7 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True" Loaded="Window_Loaded">
+        AllowsTransparency="True" Loaded="Window_Loaded">                                       
  
         <Window.Resources>
             <ObjectDataProvider
@@ -15,25 +15,7 @@
             ObjectType="{x:Type svc:TrabajarUsuario}"
             MethodName="TraerUsuarios"/>
         </Window.Resources>
-    <!--<Canvas Name="canvas_content" DataContext="Binding Source={StaticResource ResourceKay=list_usuario}}" Height="266" Width="559">
-        <StackPanel Canvas.Left="333" Canvas.Top="45">
-            <StackPanel Width="198" Height="102" Margin="0 15 0 0">
-                <TextBlock Text="{Binding NombreCompleto}" Height="25" Background="Bisque" Padding="5"/>
-                <TextBlock Text="{Binding Nickname}" Height="25" Background="Beige" Padding="5"/>
-                <TextBlock Text="{Binding Password}" Height="25" Background="Bisque" Padding="5"/>
-            </StackPanel>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Canvas.Left="333" Canvas.Top="0" Height="23" Width="200">
-            <Button Canvas.Left="108" Canvas.Top="90" Content="|&lt;" Height="23" Name="btnFirst" Width="40" Click="btnFirst_Click" Margin="0 0 10 0" />
-            <Button Canvas.Left="108" Canvas.Top="90" Content="&lt;" Height="23" Name="btnPrevious" Width="40" Click="btnPrevious_Click" Margin="0 0 10 0" />
-            <Button Canvas.Left="108" Canvas.Top="90" Content="&gt;" Height="23" Name="btnNext" Width="40" Click="btnNext_Click" Margin="0 0 10 0" />
-            <Button Canvas.Left="108" Canvas.Top="90" Content="&gt;|" Height="23" Name="btnLast" Width="40" Click="btnLast_Click" Margin="0 0 10 0" />
-        </StackPanel>
-        <StackPanel Canvas.Left="0" Canvas.Top="0" Height="36" Name="stackPanel1" Width="277">
-            <Button Canvas.Left="108" Canvas.Top="90" Content="Nuevo;" Height="23" Name="btnNuevo" Width="76" Click="btnNuevo_Click" Margin="0 0 10 0" />
-        </StackPanel>
-                                          
-    </Canvas>-->
+
     <Border CornerRadius="10">
         <Border.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
@@ -41,20 +23,42 @@
                 <GradientStop Color="#1b1448" Offset="0.75" />
             </LinearGradientBrush>
         </Border.Background>
-        <Grid>
+        <Canvas Name="canvas_content" DataContext="{Binding Source={StaticResource ResourceKey=list_usuario}}" Height="266" Width="559">
+        <StackPanel Canvas.Left="333" Canvas.Top="45">
+            <StackPanel Width="198" Height="102" Margin="0 15 0 0">
+                <TextBlock Text="{Binding NombreCompleto}" Height="25" Background="Bisque" Padding="5"/>
+                <TextBlock Text="{Binding Nickname}" Height="25" Background="Beige" Padding="5"/>
+                <TextBlock Text="{Binding Password}" Height="25" Background="Bisque" Padding="5"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Canvas.Left="12" Canvas.Top="0" Height="39" Width="535">
+            <Button  Content="Nuevo" Name="btnNuevo"  Height="30" Width="68" Click="btnNuevo_Click"/>
+            <Button  Content="Eliminar" Name="btnEliminar" Margin="0,0,25,0" Height="34" Width="77" Click="btnEliminar_Click" />
+            <Button  Content="Cancelar" Name="btnCancelar"  Margin="0,0,25,0" Height="34" Width="67" Click="btnCancelar_Click" />
+            <Button  Content="Guardar" Name="btnGuardar"  Height="29" Width="64" Click="btnGuardar_Click" />
+            <Button  Content="|&lt;" Name="btnPrimero"  Margin="0 0 10 0" Width="40" Height="23" Click="btnPrimero_Click" />
+            <Button  Content="&lt;" Name="btnAnterior"  Margin="0 0 10 0" Width="40" Height="23" Click="btnAnterior_Click" />
+            <Button  Content="&gt;" Name="btnSiguiente"   Margin="0 0 10 0" Width="40" Height="23" Click="btnSiguiente_Click" />
+            <Button  Content="&gt;|" Name="btnUltimo"  Margin="0 0 10 0" Width="40" Height="23" Click="btnUltimo_Click"/>
+        </StackPanel>
+                                   
+    </Canvas>
+    </Border>
+    
+    <!--<Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,6,164,4" Width="612">
-                <Button  Content="Nuevo" Name="btnNuevo" Click="btnNuevo_Click" Height="30" Width="68" />
-                <Button  Content="Eliminar" Name="btnEliminar" Margin="0,0,25,0" Click="btnEliminar_Click" Height="34" Width="77" />
-                <Button  Content="Cancelar" Name="btnCancelar" Click="btnCancelar_Click" Margin="0,0,25,0" Height="34" Width="67" />
-                <Button  Content="Guardar" Name="btnGuardar" Click="btnGuardar_Click" Height="29" Width="64" />
-                <Button  Content="|&lt;" Name="btnPrimero" Click="btnPrimero_Click" Margin="0 0 10 0" Width="40" Height="23"/>
-                <Button  Content="&lt;" Name="btnAnterior" Click="btnAnterior_Click" Margin="0 0 10 0" Width="40" Height="23" />
-                <Button  Content="&gt;" Name="btnSiguiente" Click="btnSiguiente_Click"  Margin="0 0 10 0" Width="40" Height="23"/>
-                <Button  Content="&gt;|" Name="btnUltimo" Click="btnUltimo_Click" Margin="0 0 10 0" Width="40" Height="23"/>
+                <StackPanel Name="stack_content" DataContext="Binding Source={StaticResource ResourceKay=list_usuario}}"  Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,6,164,4" Width="612">
+                <Button  Content="Nuevo" Name="btnNuevo"  Height="30" Width="68" Click="btnNuevo_Click" />
+                <Button  Content="Eliminar" Name="btnEliminar" Margin="0,0,25,0" Height="34" Width="77" Click="btnEliminar_Click" />
+                <Button  Content="Cancelar" Name="btnCancelar"  Margin="0,0,25,0" Height="34" Width="67" Click="btnCancelar_Click" />
+                <Button  Content="Guardar" Name="btnGuardar"  Height="29" Width="64" Click="btnGuardar_Click" />
+                <Button  Content="|&lt;" Name="btnPrimero"  Margin="0 0 10 0" Width="40" Height="23" Click="btnPrimero_Click" />
+                <Button  Content="&lt;" Name="btnAnterior"  Margin="0 0 10 0" Width="40" Height="23" Click="btnAnterior_Click" />
+                <Button  Content="&gt;" Name="btnSiguiente"   Margin="0 0 10 0" Width="40" Height="23" Click="btnSiguiente_Click" />
+                <Button  Content="&gt;|" Name="btnUltimo"  Margin="0 0 10 0" Width="40" Height="23" Click="btnUltimo_Click" />
             </StackPanel>
             <Grid Width="300" Margin="162,69,314,90" VerticalAlignment="Center" Grid.Row="1" 
                   Name="grid_content" DataContext="{Binding Source={StaticResource ResourceKey=list_usuario}}">
@@ -78,8 +82,5 @@
                 <Label Grid.Row="6" Content="Password" Name="lblPassword" Foreground="White" FontSize="14" Margin="0,0,200,0" />
                 <TextBox  Grid.Row="6" Name="txtPassword" Text="{Binding Password}" Margin="100,0,0,0" />
             </Grid>
-
-            
-        </Grid>
-    </Border>
+        </Grid>-->
 </Window>

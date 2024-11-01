@@ -14,7 +14,8 @@ namespace ClaseBase
         public int RolCodigo { get; set; }
 
         public Usuario() {}
-        public Usuario(string pUsername, string pPassword) { }
+        public Usuario(string pNickname, string pPassword) { }
+        public Usuario(string pNickname, string pPassword, string pNombreCompleto, int RolCodigo) { }
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
