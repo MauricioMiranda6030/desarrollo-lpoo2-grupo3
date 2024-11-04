@@ -13,9 +13,10 @@ namespace ClaseBase
         public ObservableCollection<Usuario> TraerUsuarios()
         {
             ObservableCollection<Usuario> listaUsuario = new ObservableCollection<Usuario>();
-            listaUsuario.Add(new Usuario ("rocio","123"));
-            listaUsuario.Add(new Usuario("nico", "456"));
-
+            Rol oRol_Admin = new Rol(1, "admin");
+            Rol oRol_Op = new Rol(1, "operador");
+            listaUsuario.Add(new Usuario("rocio", "Rocio Guerrero", oRol_Admin));
+            listaUsuario.Add(new Usuario("nico", "Nicolás Velazco", oRol_Op));
             return listaUsuario;
         }
 
@@ -41,7 +42,7 @@ namespace ClaseBase
                 oUsuario.Nickname = row["Apellido"].ToString();
                 oUsuario.NombreCompleto = row["NombreCompleto"].ToString();
                 oUsuario.Password = row["Password"].ToString();
-                oUsuario.RolCodigo = (int)row["RolCodigo"];
+                //oUsuario.RolCodigo = (int)row["RolCodigo"];
 
                 usuario.Add(oUsuario);
             }

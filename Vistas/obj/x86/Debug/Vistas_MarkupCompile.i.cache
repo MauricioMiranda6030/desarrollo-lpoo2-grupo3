@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\obj\x86\Debug\
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\obj\x86\Debug\
 Vistas
 none
 false
 DEBUG;TRACE
-E:\dev\lpoo2\LPOOIIGrupo03\Vistas\App.xaml
-161997201568
+C:\Repositorios\desarrollo-lpoo2-grupo3\Vistas\App.xaml
+181460250242
 
-17651377479
-13-498048765
-ABMUsuarios.xaml;HomeWindow.xaml;LoginWindow.xaml;MyUserControl\LoginUserControl.xaml;Styles\Buttons.xaml;Styles\ButtonStyle.xaml;Styles\DiccionarioEstilos.xaml;Styles\UIColors.xaml;util\dialogBox.xaml;util\dialogYesNo.xaml;util\style.xaml;View\atletaView.xaml;View\CategoryView.xaml;View\CompetenceView.xaml;View\Discipline.xaml;View\MainView.xaml;
+191769818538
+132101202449
+ABMUsuarios.xaml;HomeWindow.xaml;LoginWindow.xaml;MyUserControl\LoginUserControl.xaml;Styles\Buttons.xaml;Styles\ButtonStyle.xaml;Styles\DiccionarioEstilos.xaml;Styles\UIColors.xaml;util\dialogBox.xaml;util\dialogYesNo.xaml;util\style.xaml;View\atletaView.xaml;View\CategoryView.xaml;View\CompetenceView.xaml;View\Discipline.xaml;View\MainView.xaml;View\usuario\ListView.xaml;View\usuario\UserView.xaml;
 
 True
 
