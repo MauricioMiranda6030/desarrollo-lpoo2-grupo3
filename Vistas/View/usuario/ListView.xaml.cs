@@ -31,9 +31,22 @@ namespace Vistas.View.usuario
 
         private void ListView_Loaded(object sender, RoutedEventArgs e)
         {
-            ObjectDataProvider odp = (ObjectDataProvider)this.Resources["list_usuario"];
+            /*ObjectDataProvider odp = (ObjectDataProvider)this.Resources["list_usuario"];
             listaUsuarios = odp.Data as ObservableCollection<Usuario>;
-            Vista = (CollectionView)CollectionViewSource.GetDefaultView(canvas_content.DataContext);
+            Vista = (CollectionView)CollectionViewSource.GetDefaultView(canvas_content.DataContext);*/
+            ObjectDataProvider odp = (ObjectDataProvider)this.Resources["list_usuario"];
+
+            // Asegurarse de que odp.Data devuelve una ObservableCollection<Usuario>
+            listaUsuarios = odp.Data as ObservableCollection<Usuario>;
+
+            if (listaUsuarios != null)
+            {
+                // Configurar el DataContext para la lista de usuarios cargados
+                this.DataContext = listaUsuarios;
+
+                // Configurar la vista de colección
+                Vista = (CollectionView)CollectionViewSource.GetDefaultView(listaUsuarios);
+            }
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

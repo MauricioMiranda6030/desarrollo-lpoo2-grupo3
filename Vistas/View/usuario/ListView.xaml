@@ -11,7 +11,7 @@
         <ObjectDataProvider
             x:Key="list_usuario"
             ObjectType="{x:Type svc:TrabajarUsuario}"
-            MethodName="TraerUsuarios"/>
+            MethodName="obtenerUsuarios"/>
     </UserControl.Resources>
     <Border CornerRadius="10" BorderThickness="3">
         <Border.Background>
