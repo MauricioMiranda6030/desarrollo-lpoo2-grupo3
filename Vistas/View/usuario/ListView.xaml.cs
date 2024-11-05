@@ -52,8 +52,8 @@ namespace Vistas.View.usuario
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             Vista.MoveCurrentToNext();
-            if (Vista.IsCurrentBeforeFirst)
-                Vista.MoveCurrentToLast();
+            if (Vista.IsCurrentAfterLast)
+                Vista.MoveCurrentToFirst();
         }
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
