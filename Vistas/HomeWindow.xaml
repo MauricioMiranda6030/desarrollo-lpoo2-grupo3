@@ -113,6 +113,17 @@
                             <TextBlock Text="Evento" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color9}" Cursor="Hand"
+                                 x:Name="btnUsuario"
+                                 Click="btnUsuario_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource menuButtonIcon}">
+            &#xf007; <!-- Ícono de Usuario -->
+                            </TextBlock>
+                            <TextBlock Text="Usuario" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
                 </StackPanel>
             </Border>
 

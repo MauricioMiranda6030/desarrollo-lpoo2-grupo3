@@ -30,4 +30,4 @@ E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.dll
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\bin\Debug\ClaseBase.pdb
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.dll
 E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.pdb
-E:\dev\lpoo2\LPOOIIGrupo03\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+C:\Repositorios\desarrollo-lpoo2-grupo3\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache

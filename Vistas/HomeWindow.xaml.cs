@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Vistas.View;
+using Vistas.View.usuario;
 
 namespace Vistas
 {
@@ -92,6 +93,11 @@ namespace Vistas
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             WindowUtil.openWindow(this, new LoginWindow());
+        }
+
+        private void btnUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            WindowUtil.OpenUserControl(ContenArea, new UserView());
         }
 
 

@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Vistas.View.usuario.ListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:svc="clr-namespace:ClaseBase;assembly=ClaseBase"
+             mc:Ignorable="d"
+             Loaded="ListView_Loaded"
+             d:DesignHeight="300" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ObjectDataProvider
+            x:Key="list_usuario"
+            ObjectType="{x:Type svc:TrabajarUsuario}"
+            MethodName="obtenerUsuarios"/>
+    </UserControl.Resources>
+    <Border CornerRadius="10" BorderThickness="3">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                <GradientStop Color="#cdfee6" Offset="0"/>
+                <GradientStop Color="{StaticResource tercerBackColor1}" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Fila de Botones -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <Button Style="{StaticResource iconButton1}" Tag="{StaticResource color1}" Margin="5" Width="150">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource iconButtonIcon}">
+            &#xf007; <!-- Ícono de Gestión de Usuario -->
+                        </TextBlock>
+                        <TextBlock Text="Gestión de Usuario" Margin="5,0,0,0"/>
+                        <!-- Añadido margen a la izquierda para separación -->
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource iconButton}" Tag="{StaticResource color2}" x:Name="btnFirst" Click="btnFirst_Click" Margin="5" Width="50">
+                    <TextBlock Style="{StaticResource iconButtonIcon}">
+                        &#xf048; <!-- Ícono de Primer Elemento -->
+                    </TextBlock>
+                </Button>
+                <Button Style="{StaticResource iconButton}" x:Name="btnPrevious" Click="btnPrevious_Click" Tag="{StaticResource color3}" Margin="5" Width="50">
+                    <TextBlock Style="{StaticResource iconButtonIcon}">
+                        &#xf060; <!-- Ícono de anterior -->
+                    </TextBlock>
+                </Button>
+                <Button Style="{StaticResource iconButton}" x:Name="btnNext" Click="btnNext_Click" Tag="{StaticResource color4}" Margin="5" Width="50">
+                    <TextBlock Style="{StaticResource iconButtonIcon}">
+                        &#xf061; <!-- Ícono de Siguiente -->
+                    </TextBlock>
+                </Button>
+                <Button Style="{StaticResource iconButton}" Tag="{StaticResource color5}" x:Name="btnLast" Click="btnLast_Click" Margin="5" Width="50">
+                    <TextBlock Style="{StaticResource iconButtonIcon}">
+                        &#xf051; <!-- Ícono de Ultimo elemento -->
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+
+            <!-- Campos de Texto -->
+            <StackPanel Name="canvas_content" Width="300" HorizontalAlignment="Center" DataContext="{Binding Source={StaticResource ResourceKey=list_usuario}}">
+                <Label Content="Username:" HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontFamily="Consolas"
+                       FontWeight="Bold"/>
+                <TextBox Width="200" Margin="0,0,0,10" Text="{Binding Nickname}"/>
+
+                <Label Content="Nombre Completo:" HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontFamily="Consolas"
+                       FontWeight="Bold"/>
+                <TextBox Width="200" Margin="0,0,0,10" Text="{Binding NombreCompleto}"/>
+
+                <Label Content="Rol:" HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontFamily="Consolas"
+                       FontWeight="Bold"/>
+                <TextBox Width="200" Margin="0,0,0,10" Text="{Binding Rol.Descripcion}"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

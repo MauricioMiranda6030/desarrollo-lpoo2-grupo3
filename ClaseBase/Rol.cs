@@ -11,5 +11,11 @@ namespace ClaseBase
         public String Descripcion { get; set; }
 
         public Rol() {}
+
+        public Rol(int codigo, string descripcion)
+        {
+            this.Codigo = codigo;
+            this.Descripcion = descripcion;
+        }
     }
 }
