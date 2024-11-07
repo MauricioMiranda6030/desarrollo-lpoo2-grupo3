@@ -10,6 +10,9 @@ namespace ClaseBase
 {
     public class TrabajarUsuario
     {
+        static readonly string s_connectionString = ClaseBase.Properties.Settings.Default.comdepConnectionString;
+
+
         public ObservableCollection<Usuario> TraerUsuarios()
         {
             ObservableCollection<Usuario> listaUsuario = new ObservableCollection<Usuario>();
@@ -75,33 +78,191 @@ namespace ClaseBase
             return usuarios;
         }
 
-        /*public ObservableCollection<Usuario> obtenerUsuarios()
+        // Método para obtener un usuario por ID
+        public static Usuario GetUsuarioById(int id)
         {
-            SqlConnection cnn = new SqlConnection("Data Source=.'\'SQLEXPRESS;AttachDbFilename=E:'\'dev'\'lpoo2'\'LPOOIIGrupo03'\'comdep.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            Usuario usuario = null;
+            string consulta = @"SELECT id, nickname, password, apellidos_nombres, rol_codigo
+                            FROM Usuario WHERE id = @id";
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            ObservableCollection<Usuario> usuario = new ObservableCollection<Usuario>();
-            foreach (DataRow row in dt.Rows)
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
             {
-                Usuario oUsuario = new Usuario();
-                oUsuario.Id = Convert.ToInt32(row["Id"].ToString());
-                oUsuario.Nickname = row["Apellido"].ToString();
-                oUsuario.NombreCompleto = row["NombreCompleto"].ToString();
-                oUsuario.Password = row["Password"].ToString();
-                //oUsuario.rol = (int)row["RolCodigo"];
-
-                usuario.Add(oUsuario);
+                using (SqlCommand cmd = new SqlCommand(consulta, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cnn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            usuario = new Usuario
+                            {
+                                Id = Convert.ToInt32(reader["id"]),
+                                Nickname = reader["nickname"].ToString(),
+                                Password = reader["password"].ToString(),
+                                NombreCompleto = reader["apellidos_nombres"].ToString(),
+                                // Puedes convertir RolCodigo a un objeto Rol si es necesario
+                            };
+                        }
+                    }
+                }
             }
+
             return usuario;
-        }*/
+        }
+
+        // Método para agregar un nuevo usuario
+        public static void addUsuario(Usuario usuario)
+        {
+            string query = @"INSERT INTO Usuario (nickname, password, apellidos_nombres, rol_codigo) 
+                         VALUES (@Nickname, @Password, @NombreCompleto, @RolCodigo)";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Nickname", usuario.Nickname);
+                cmd.Parameters.AddWithValue("@Password", usuario.Password);
+                cmd.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
+                cmd.Parameters.AddWithValue("@RolCodigo", usuario.Rol.Codigo);
+                 // Asegúrate de tener la propiedad `Codigo` en `Rol`
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Método para listar todos los usuarios en un DataTable
+        public static DataTable listUsuarios()
+        {
+            string consulta = @"SELECT Id, nickname, apellidos_nombres, rol_codigo 
+                            FROM Usuario";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // Método para actualizar un usuario existente
+        public static void updateUsuario(Usuario usuario)
+        {
+            string query = @"UPDATE Usuario 
+                         SET nickname = @Nickname, 
+                             password = @Password, 
+                             apellidos_nombres = @NombreCompleto, 
+                             rol_codigo = @RolCodigo 
+                         WHERE Id = @Id";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Nickname", usuario.Nickname);
+                cmd.Parameters.AddWithValue("@Password", usuario.Password);
+                cmd.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
+                cmd.Parameters.AddWithValue("@RolCodigo", usuario.Rol);
+                cmd.Parameters.AddWithValue("@Id", usuario.Id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Método para eliminar un usuario por ID
+        public static void deleteUsuario(int id)
+        {
+            string query = @"DELETE FROM Usuario WHERE id = @Id";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        public static DataTable GetRoles()
+        {
+            string query = "SELECT codigo, descripcion FROM Rol";
+            DataTable rolesTable = new DataTable();
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(rolesTable); // Llenar el DataTable con los resultados de la consulta
+            }
+
+            return rolesTable; // Devolver el DataTable con los roles
+        }
+
+        public static Rol getRolById(int id)
+        {
+            Rol rol = null;
+            string consulta = @"SELECT id, nickname, password, apellidos_nombres, rol_codigo 
+                            FROM Usuario WHERE Id = @id";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(consulta, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cnn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            rol = new Rol
+                            {
+                                Codigo = Convert.ToInt32(reader["codigo"]),
+                                Descripcion = reader["descripcion"].ToString(),
+
+                            };
+                        }
+                    }
+                }
+
+                return rol;
+            }
+
+
+
+            /*public ObservableCollection<Usuario> obtenerUsuarios()
+            {
+                SqlConnection cnn = new SqlConnection("Data Source=.'\'SQLEXPRESS;AttachDbFilename=E:'\'dev'\'lpoo2'\'LPOOIIGrupo03'\'comdep.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "SELECT * FROM Usuario";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = cnn;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                ObservableCollection<Usuario> usuario = new ObservableCollection<Usuario>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Usuario oUsuario = new Usuario();
+                    oUsuario.Id = Convert.ToInt32(row["Id"].ToString());
+                    oUsuario.Nickname = row["Apellido"].ToString();
+                    oUsuario.NombreCompleto = row["NombreCompleto"].ToString();
+                    oUsuario.Password = row["Password"].ToString();
+                    //oUsuario.rol = (int)row["RolCodigo"];
+
+                    usuario.Add(oUsuario);
+                }
+                return usuario;
+            }*/
+        }
+
+
     }
 }
