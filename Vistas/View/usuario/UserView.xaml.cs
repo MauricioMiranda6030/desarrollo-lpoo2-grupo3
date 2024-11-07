@@ -37,7 +37,7 @@ namespace Vistas.View.usuario
 
         private void btnOrdenamiento_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowUtil.OpenUserControl(subContenArea, new ListOrder());
         }
 
         private void btnLista_Click(object sender, RoutedEventArgs e)

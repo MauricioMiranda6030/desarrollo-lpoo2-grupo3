@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Vistas.View.usuario.ListOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="500">
+    <StackPanel Margin="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="400">
+
+        <!-- Filtro de búsqueda -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 0, 0, 10">
+            <TextBox x:Name="txtFiltro" Width="200" Margin="0, 0, 10, 0" TextChanged="txtFiltro_TextChanged"/>
+        </StackPanel>
+
+        <!-- Grilla de Usuarios -->
+        <DataGrid x:Name="dgUsuarios"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  HorizontalAlignment="Center"
+                  ItemsSource="{Binding UsuariosFiltrados}"
+                  Width="400"
+                  MaxHeight="300">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Username" Binding="{Binding Nickname}" Width="150"/>
+                <DataGridTextColumn Header="Nombre Completo" Binding="{Binding NombreCompleto}" Width="200"/>
+                <DataGridTextColumn Header="Rol" Binding="{Binding Rol.Descripcion}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>
+
