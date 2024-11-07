@@ -156,6 +156,42 @@ namespace Vistas.View.usuario
 
         private void dataGridUsuarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            if (dataGridUsuarios.SelectedItem != null)
+            {
+                // Intentar hacer el cast manualmente
+                DataRowView rowView = dataGridUsuarios.SelectedItem as DataRowView;
+
+                if (rowView != null)
+                {
+                    // Asignar los valores de la fila seleccionada a los controles
+                    idModificar = int.Parse(rowView["Id"].ToString());
+                    txtNickname.Text = rowView["nickname"].ToString();
+                    txtPassword.Text = rowView["password"].ToString();  // Si "password" es un campo válido
+                    txtNombreCompleto.Text = rowView["apellidos_nombres"].ToString();
+                    txtRol.SelectedValue = rowView["rol_codigo"].ToString();
+                }
+                else
+                {
+                    // Si no es un DataRowView válido, limpiar los campos
+                    txtNickname.Text = string.Empty;
+                    txtPassword.Text = string.Empty;
+                    txtNombreCompleto.Text = string.Empty;
+                    txtRol.SelectedValue = null;
+                }
+            }
+            else
+            {
+                // Si no hay selección, resetear los campos
+                txtNickname.Text = string.Empty;
+                txtPassword.Text = string.Empty;
+                txtNombreCompleto.Text = string.Empty;
+                txtRol.SelectedValue = null;
+            }
+
+
+            
+            /**
             if (dataGridUsuarios.SelectedItem != null)
             {
                 // Obtener la fila seleccionada como un DataRowView
@@ -166,8 +202,8 @@ namespace Vistas.View.usuario
                 txtNickname.Text = rowView["nickname"].ToString();
                 txtPassword.Text = rowView["password"].ToString();  // Supongo que apellidos_nombres es lo que quieres mostrar en el campo Password
                 txtNombreCompleto.Text = rowView["apellidos_nombres"].ToString(); // Puede que quieras cambiar esta asignación
-                txtRol.SelectedValue = rowView["rol_codigo"].ToString();
-            }
+             //   txtRol.SelectedValue = rowView["rol_codigo"].ToString();
+            }**/
         }
 
         public void cleanup()
