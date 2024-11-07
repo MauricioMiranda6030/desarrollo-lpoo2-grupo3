@@ -10,6 +10,8 @@ namespace ClaseBase
 {
     public class TrabajarUsuario
     {
+        static readonly string s_connectionString = ClaseBase.Properties.Settings.Default.comdepConnectionString;
+
         /*public ObservableCollection<Usuario> TraerUsuarios()
         {
             ObservableCollection<Usuario> listaUsuario = new ObservableCollection<Usuario>();
@@ -77,6 +79,81 @@ namespace ClaseBase
                 }
             }
             return usuarios;
+        }
+
+        // Método para agregar un nuevo usuario
+        public static void addUsuario(Usuario usuario)
+        {
+            string query = @"INSERT INTO Usuario (nickname, password, apellidos_nombres, rol_codigo) 
+                         VALUES (@Nickname, @Password, @NombreCompleto, @RolCodigo)";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Nickname", usuario.Nickname);
+                cmd.Parameters.AddWithValue("@Password", usuario.Password);
+                cmd.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
+                cmd.Parameters.AddWithValue("@RolCodigo", usuario.Rol.Codigo);
+                // Asegúrate de tener la propiedad `Codigo` en `Rol`
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Método para listar todos los usuarios en un DataTable
+        public static DataTable listUsuarios()
+        {
+            string consulta = @"SELECT Id, nickname, password, apellidos_nombres, rol_codigo 
+                            FROM Usuario";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // Método para eliminar un usuario por ID
+        public static void deleteUsuario(int id)
+        {
+            string query = @"DELETE FROM Usuario WHERE id = @Id";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Método para actualizar un usuario existente
+        public static void updateUsuario(Usuario usuario)
+        {
+            string query = @"UPDATE Usuario 
+                         SET nickname = @Nickname, 
+                             password = @Password, 
+                             apellidos_nombres = @NombreCompleto, 
+                             rol_codigo = @RolCodigo 
+                         WHERE id = @Id";
+
+            using (SqlConnection cnn = new SqlConnection(s_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.AddWithValue("@Nickname", usuario.Nickname);
+                cmd.Parameters.AddWithValue("@Password", usuario.Password);
+                cmd.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
+                cmd.Parameters.AddWithValue("@RolCodigo", usuario.Rol.Codigo);
+                cmd.Parameters.AddWithValue("@Id", usuario.Id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
