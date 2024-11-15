@@ -1,0 +1,9 @@
+﻿<Window x:Class="Vistas.View.usuario.PreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vista Previa de Impresión" Height="500" Width="600">
+    <Grid>
+        <FlowDocumentReader x:Name="docReader" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        <Button Content="Imprimir" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,252,33" Click="Imprimir_Click"/>
+    </Grid>
+</Window>

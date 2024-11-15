@@ -99,6 +99,12 @@
     <Compile Include="View\usuario\OrdenatedList.xaml.cs">
       <DependentUpon>OrdenatedList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\usuario\PreviewWindow.xaml.cs">
+      <DependentUpon>PreviewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\usuario\PrintPreview.xaml.cs">
+      <DependentUpon>PrintPreview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\usuario\UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
@@ -211,6 +217,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\usuario\OrdenatedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\usuario\PreviewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\usuario\PrintPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

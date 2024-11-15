@@ -28,6 +28,7 @@
                 <DataGridTextColumn Header="Rol" Binding="{Binding Rol.Descripcion}" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="btnVistaPrevia" Content="Vista Previa" Click="btnVistaPrevia_Click" Width="100" Margin="10"/>
     </StackPanel>
 </UserControl>
 

@@ -53,17 +53,47 @@ namespace Vistas.View.usuario
         {
             string filtro = txtFiltro.Text.ToLower();
 
-            // Verificamos si el filtro solo contiene letras
+           
             if (string.IsNullOrEmpty(filtro))
             {
-                // Si no contiene letras o está vacío, mostramos todos los usuarios
+               
                 cargarUsuario();
             }
             else
             {
-                // Si contiene letras, aplicamos el filtro
+                
                 aplicarFiltro(filtro);
             }
         }
+
+        private void btnVistaPrevia_Click(object sender, RoutedEventArgs e)
+        {
+            
+            ObservableCollection<Usuario> usuarios = new ObservableCollection<Usuario>();
+
+            if (string.IsNullOrEmpty(txtFiltro.Text))
+            {
+               
+                usuarios = trabajarUsuario.getUserOrder();
+            }
+            else
+            {
+               
+                string filtro = txtFiltro.Text.ToLower();
+                foreach (var usuario in trabajarUsuario.getUserOrder())
+                {
+                    if (usuario.Nickname.ToLower().Contains(filtro))
+                    {
+                        usuarios.Add(usuario);
+                    }
+                }
+            }
+
+           
+            PrintPreview printPreview = new PrintPreview(usuarios);
+            printPreview.ShowDialog();  
+
+        }//fin
+
     }
 }
